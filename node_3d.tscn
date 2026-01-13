@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://b101tx86ypnx4"]
+
+[ext_resource type="Texture2D" uid="uid://qmgfw5uctkx3" path="res://icon.svg" id="1_noarx"]
+[ext_resource type="Shader" uid="uid://bww4lxpbbdy3n" path="res://new_shader.tres" id="2_a0tk4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wc5p8"]
+shader = ExtResource("2_a0tk4")
+
+[sub_resource type="Sky" id="Sky_jsk3o"]
+sky_material = SubResource("ShaderMaterial_wc5p8")
+
+[sub_resource type="Environment" id="Environment_4arys"]
+background_mode = 2
+sky = SubResource("Sky_jsk3o")
+glow_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62854445, 0)
+billboard = 1
+shaded = true
+double_sided = false
+alpha_cut = 1
+texture = ExtResource("1_noarx")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.090303, -2.2756457)
+size = Vector3(50, 0.5, 10)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4369578, 1.1331797)
+size = Vector3(50, 0.5, 10)
+
+[node name="Camera3D" type="Camera3D" parent="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.409089)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4arys")
