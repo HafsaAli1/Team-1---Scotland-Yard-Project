@@ -1,7 +1,10 @@
-[gd_scene load_steps=132 format=3 uid="uid://b101tx86ypnx4"]
+[gd_scene load_steps=138 format=3 uid="uid://b101tx86ypnx4"]
 
-[ext_resource type="Shader" uid="uid://bww4lxpbbdy3n" path="res://new_shader.tres" id="2_a0tk4"]
+[ext_resource type="Environment" uid="uid://cfahwu7y2kj8y" path="res://env.tres" id="1_ksf64"]
+[ext_resource type="Texture2D" uid="uid://dipiq4p4i0dge" path="res://130_asphalt texture-seamless.jpg" id="3_8hpcn"]
 [ext_resource type="Texture2D" uid="uid://cv7nf8a6yjn3h" path="res://buildings_00000.png" id="3_a0tk4"]
+[ext_resource type="Texture2D" uid="uid://mdoi8exf30jt" path="res://PavementNormal.png" id="4_6oqmm"]
+[ext_resource type="Texture2D" uid="uid://cyu2joeoe6p1k" path="res://11_road texture-seamless.jpg" id="4_ksf64"]
 [ext_resource type="Texture2D" uid="uid://gm5qbd2fqecp" path="res://playerIdle/playerIdle_00001.png" id="4_nrhv2"]
 [ext_resource type="Texture2D" uid="uid://nqxd0d3uskaa" path="res://playerIdle/playerIdle_00002.png" id="5_qshay"]
 [ext_resource type="Texture2D" uid="uid://daav0r7qwbprc" path="res://playerIdle/playerIdle_00003.png" id="6_wu3aa"]
@@ -127,38 +130,25 @@
 [ext_resource type="Texture2D" uid="uid://cdgjeymsw5js7" path="res://playerMove/turnLeft/turnLeft_00004.png" id="125_33rtv"]
 [ext_resource type="Texture2D" uid="uid://3wa30kuuyd5l" path="res://playerMove/turnLeft/turnLeft_00005.png" id="126_iuekc"]
 [ext_resource type="Texture2D" uid="uid://bve6v5i0u4xfp" path="res://playerMove/turnLeft/turnLeft_00006.png" id="127_h8eeo"]
+[ext_resource type="PackedScene" uid="uid://du5sho2kcxr51" path="res://models/Lamp.fbx" id="129_k4jpp"]
+[ext_resource type="Texture2D" uid="uid://ctnrewhboa1as" path="res://BusSign.png" id="129_npj4g"]
+[ext_resource type="PackedScene" uid="uid://db6vpdr1vltbn" path="res://models/busShelter.glb" id="130_k4jpp"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_wc5p8"]
-shader = ExtResource("2_a0tk4")
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_6oqmm"]
+diffuse_mode = 1
+albedo_texture = ExtResource("3_8hpcn")
+orm_texture = ExtResource("3_8hpcn")
+normal_enabled = true
+normal_scale = 3.9
+normal_texture = ExtResource("4_6oqmm")
+ao_enabled = true
+texture_filter = 4
 
-[sub_resource type="Sky" id="Sky_jsk3o"]
-sky_material = SubResource("ShaderMaterial_wc5p8")
-radiance_size = 0
-
-[sub_resource type="Environment" id="Environment_4arys"]
-background_mode = 2
-sky = SubResource("Sky_jsk3o")
-ambient_light_source = 2
-ambient_light_color = Color(0.3744, 0.3744, 0.52, 1)
-ambient_light_energy = 0.5
-tonemap_mode = 3
-ssr_enabled = true
-sdfgi_use_occlusion = true
-glow_enabled = true
-glow_bloom = 0.62
-fog_enabled = true
-fog_mode = 1
-fog_light_color = Color(0.12575857, 0.17491509, 0.20816801, 1)
-fog_density = 1.0
-fog_aerial_perspective = 0.161
-fog_height_density = 0.3441
-fog_depth_begin = 0.0
-fog_depth_end = 3440.9
-volumetric_fog_density = 0.6629
-volumetric_fog_emission_energy = 287.28
-volumetric_fog_gi_inject = 4.71
-adjustment_enabled = true
-adjustment_saturation = 1.43
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_wwniw"]
+albedo_texture = ExtResource("4_ksf64")
+albedo_texture_force_srgb = true
+orm_texture = ExtResource("4_ksf64")
+ao_enabled = true
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gypu2"]
 animations = [{
@@ -568,10 +558,16 @@ animations = [{
 "speed": 25.0
 }]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ksf64"]
+
 [node name="Node3D" type="Node3D"]
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_4arys")
+environment = ExtResource("1_ksf64")
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 1, 0, 12.3408985, -6.9379125)
@@ -582,15 +578,18 @@ texture = ExtResource("3_a0tk4")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4617585, -2.2756457)
+gi_mode = 2
 use_collision = true
 size = Vector3(50, 0.5, 10)
+material = SubResource("ORMMaterial3D_6oqmm")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8084134, 1.1331797)
-size = Vector3(50, 0.5, 10)
+transform = Transform3D(-0.014363554, 0, -0.9998968, 0, 1, 0, 0.9998968, 0, -0.014363554, -0.4454589, -0.99454165, 5.444007)
+size = Vector3(8.782227, 0.5, 50.22455)
+material = SubResource("ORMMaterial3D_wwniw")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.056048054, 0.9984281, 0, -0.9984281, 0.056048054, -11.007404, 6.447851, 1.3543947)
+transform = Transform3D(1, 0, 0, 0, 0.056048054, 0.9984281, 0, -0.9984281, 0.056048054, -11.007404, 7.8750114, 1.4197128)
 light_color = Color(1, 0.7666667, 0, 1)
 shadow_enabled = true
 shadow_blur = 10.0
@@ -598,13 +597,48 @@ distance_fade_enabled = true
 spot_range = 28.683
 spot_angle = 75.13948
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62854445, 0)
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8718925, 10.212822)
+current = true
+far = 44.05
+
+[node name="Lamp" parent="." instance=ExtResource("129_k4jpp")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -11.051302, -0.09463991, 1.270226)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.79999995, 0, 0, 0, 0.79999995, 0, 0, 0, 0.79999995, 10.258906, 3.7870932, 2.3358073)
+shaded = true
+alpha_cut = 1
+texture = ExtResource("129_npj4g")
+
+[node name="busShelter" parent="." instance=ExtResource("130_k4jpp")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 14.528204, 2.4599237, -1.6423476)
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.562807, 3.7560415, -0.4226576)
+blend_distance = 0.0
+size = Vector3(507, 40, 24.185)
+enable_shadows = true
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.013874876, 0.99990374, 0, -0.99990374, 0.013874876, 14.779742, 6.1390996, 0)
+light_color = Color(0.8139271, 0.8139268, 0, 1)
+light_energy = 5.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+spot_angle = 71.21
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8718925, 10.212822)
+
+[node name="Player" type="AnimatedSprite3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.2433481, -10.212822)
 shaded = true
 alpha_cut = 1
 texture_filter = 4
 sprite_frames = SubResource("SpriteFrames_gypu2")
-animation = &"returnFromRight"
+animation = &"Idle"
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62854445, 6.409089)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.048567772, -0.6940913, -9.55579)
+shape = SubResource("CapsuleShape3D_ksf64")

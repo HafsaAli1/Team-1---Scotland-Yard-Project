@@ -1,0 +1,39 @@
+[gd_resource type="VisualShader" load_steps=4 format=3 uid="uid://cqka8sjm4p53r"]
+
+[ext_resource type="Texture2D" uid="uid://bh32nrg03pvo6" path="res://130_asphalt texture-seamless.jpg" id="1_jeebs"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_vdbsi"]
+texture = ExtResource("1_jeebs")
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_c4am7"]
+output_port_for_preview = 0
+input_name = "vertex"
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, depth_test_default, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+uniform sampler2D tex_vtx_2;
+
+
+
+void vertex() {
+// Input:3
+	vec3 n_out3p0 = VERTEX;
+
+
+// Texture2D:2
+	vec4 n_out2p0 = texture(tex_vtx_2, vec2(n_out3p0.xy));
+
+
+// Output:0
+	COLOR.rgb = vec3(n_out2p0.xyz);
+
+
+}
+"
+nodes/vertex/2/node = SubResource("VisualShaderNodeTexture_vdbsi")
+nodes/vertex/2/position = Vector2(140, 220)
+nodes/vertex/3/node = SubResource("VisualShaderNodeInput_c4am7")
+nodes/vertex/3/position = Vector2(-180, 260)
+nodes/vertex/connections = PackedInt32Array(2, 0, 0, 6, 3, 0, 2, 0)
