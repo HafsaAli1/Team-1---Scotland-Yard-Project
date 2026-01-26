@@ -1,4 +1,4 @@
-[gd_scene load_steps=139 format=3 uid="uid://b101tx86ypnx4"]
+[gd_scene load_steps=138 format=3 uid="uid://b101tx86ypnx4"]
 
 [ext_resource type="Environment" uid="uid://cfahwu7y2kj8y" path="res://env.tres" id="1_ksf64"]
 [ext_resource type="Texture2D" uid="uid://dipiq4p4i0dge" path="res://130_asphalt texture-seamless.jpg" id="3_8hpcn"]
@@ -149,10 +149,6 @@ albedo_texture = ExtResource("4_ksf64")
 albedo_texture_force_srgb = true
 orm_texture = ExtResource("4_ksf64")
 ao_enabled = true
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_ksf64"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ksf64"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gypu2"]
 animations = [{
@@ -562,6 +558,8 @@ animations = [{
 "speed": 25.0
 }]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ksf64"]
+
 [node name="Node3D" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -630,18 +628,6 @@ light_volumetric_fog_energy = 0.0
 light_size = 1.0
 spot_angle = 71.21
 
-[node name="RigidBody3D" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8718925, 10.212822)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.8718925, -10.212822)
-mesh = SubResource("CapsuleMesh_ksf64")
-skeleton = NodePath("../..")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.048567772, -0.6940913, -9.55579)
-shape = SubResource("CapsuleShape3D_ksf64")
-
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 
 [node name="Player" type="AnimatedSprite3D" parent="CharacterBody3D"]
@@ -651,3 +637,7 @@ alpha_cut = 1
 texture_filter = 4
 sprite_frames = SubResource("SpriteFrames_gypu2")
 animation = &"Idle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.048567772, 2.1778011, 0.657032)
+shape = SubResource("CapsuleShape3D_ksf64")
