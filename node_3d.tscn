@@ -641,3 +641,8 @@ animation = &"Idle"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.048567772, 2.1778011, 0.657032)
 shape = SubResource("CapsuleShape3D_ksf64")
+
+[node name="ReflectionProbe2" type="ReflectionProbe" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30163574, 3.9672089, 5.8220596)
+size = Vector3(48.979248, 11.870117, 8.406616)
+enable_shadows = true
