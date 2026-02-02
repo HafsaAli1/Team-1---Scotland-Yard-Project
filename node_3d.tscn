@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=3 uid="uid://b101tx86ypnx4"]
+[gd_scene load_steps=142 format=3 uid="uid://b101tx86ypnx4"]
 
 [ext_resource type="Environment" uid="uid://cfahwu7y2kj8y" path="res://env.tres" id="1_ksf64"]
 [ext_resource type="Texture2D" uid="uid://dipiq4p4i0dge" path="res://130_asphalt texture-seamless.jpg" id="3_8hpcn"]
@@ -133,6 +133,10 @@
 [ext_resource type="PackedScene" uid="uid://du5sho2kcxr51" path="res://models/Lamp.fbx" id="129_k4jpp"]
 [ext_resource type="Texture2D" uid="uid://ctnrewhboa1as" path="res://BusSign.png" id="129_npj4g"]
 [ext_resource type="PackedScene" uid="uid://db6vpdr1vltbn" path="res://models/busShelter.glb" id="130_k4jpp"]
+[ext_resource type="PackedScene" uid="uid://cp6h7ppky1btv" path="res://models/PlatformEdgeBumpy.glb" id="134_wwniw"]
+[ext_resource type="Texture2D" uid="uid://bbmp6j2cn7ah6" path="res://Underground1_00000_00000.png" id="135_b71jm"]
+[ext_resource type="PackedScene" uid="uid://bsm2l8yttgxbo" path="res://models/Train.glb" id="136_m1gn2"]
+[ext_resource type="PackedScene" uid="uid://bdvq2kbj4il0c" path="res://models/trainCart.glb" id="137_en6ay"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_6oqmm"]
 diffuse_mode = 1
@@ -646,3 +650,75 @@ shape = SubResource("CapsuleShape3D_ksf64")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30163574, 3.9672089, 5.8220596)
 size = Vector3(48.979248, 11.870117, 8.406616)
 enable_shadows = true
+
+[node name="PlatformEdgeBumpy" parent="." instance=ExtResource("134_wwniw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 28.395807, 1.9242806, 20.486166)
+
+[node name="PlatformEdgeBumpy2" parent="." instance=ExtResource("134_wwniw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 29.858534, 1.9242806, 20.486166)
+
+[node name="PlatformEdgeBumpy3" parent="." instance=ExtResource("134_wwniw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 31.303381, 1.9242806, 20.486166)
+
+[node name="PlatformEdgeBumpy4" parent="." instance=ExtResource("134_wwniw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 32.74633, 1.9242806, 20.486166)
+
+[node name="PlatformEdgeBumpy5" parent="." instance=ExtResource("134_wwniw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 34.23023, 1.9242806, 20.486166)
+
+[node name="PlatformEdgeBumpy6" parent="." instance=ExtResource("134_wwniw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 35.710327, 1.9242806, 20.486166)
+
+[node name="PlatformEdgeBumpy7" parent="." instance=ExtResource("134_wwniw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 37.186283, 1.9242806, 20.486166)
+
+[node name="PlatformEdgeBumpy8" parent="." instance=ExtResource("134_wwniw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 38.637867, 1.9242806, 20.486166)
+
+[node name="PlatformEdgeBumpy9" parent="." instance=ExtResource("134_wwniw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 40.1216, 1.9242806, 20.486166)
+
+[node name="PlatformEdgeBumpy10" parent="." instance=ExtResource("134_wwniw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 41.479412, 1.9242806, 20.486166)
+
+[node name="PlatformEdgeBumpy11" parent="." instance=ExtResource("134_wwniw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 42.93363, 1.9242806, 20.486166)
+
+[node name="PlatformEdgeBumpy12" parent="." instance=ExtResource("134_wwniw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 44.422554, 1.9242806, 20.486166)
+
+[node name="PlatformEdgeBumpy13" parent="." instance=ExtResource("134_wwniw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 45.74596, 1.9242806, 20.486166)
+
+[node name="PlatformEdgeBumpy14" parent="." instance=ExtResource("134_wwniw")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 47.156605, 1.9242806, 20.486166)
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.014572, 6.0964117, 11.941894)
+texture = ExtResource("135_b71jm")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(0.29999995, 0, 0, 0, 0.29999995, 0, 0, 0, 0.29999995, 39.35647, 9.996613, 12.266746)
+size = Vector3(75, 1, 95.70117)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(0.29999995, 0, 0, 0, 0.29999995, 0, 0, 0, 0.29999995, 37.87107, 1.8250266, 15.871311)
+size = Vector3(69.383354, 5, 25)
+
+[node name="Train" parent="." instance=ExtResource("136_m1gn2")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 31.065998, 0, 24.507542)
+
+[node name="trainCart" parent="Train" instance=ExtResource("137_en6ay")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.446752, 0, 0.015157223)
+
+[node name="trainCart2" parent="Train" instance=ExtResource("137_en6ay")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.915429, 0, 0.015157223)
+
+[node name="trainCart3" parent="Train" instance=ExtResource("137_en6ay")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.398201, 0, 0.015157223)
+
+[node name="trainCart4" parent="Train" instance=ExtResource("137_en6ay")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.919987, 0, 0.015157223)
+
+[node name="trainCart5" parent="Train" instance=ExtResource("137_en6ay")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.39973, 0, 0.015157223)
