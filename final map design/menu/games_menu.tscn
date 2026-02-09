@@ -1,0 +1,106 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckj78iyt0lmp1"]
+
+[ext_resource type="Texture2D" uid="uid://b0el2kbrdb8i" path="res://Leeds Map.webp" id="1_s25x5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n5lge"]
+texture = ExtResource("1_s25x5")
+modulate_color = Color(0.5529556, 0.55295557, 0.55295557, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dr236"]
+bg_color = Color(11.708403, 11.708403, 11.708403, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s25x5"]
+bg_color = Color(11.708403, 11.708403, 11.708403, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n5lge"]
+bg_color = Color(0.20432723, 0.072778575, 0.6914035, 1)
+
+[node name="GamesMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_n5lge")
+
+[node name="LineEdit" type="LineEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 234.0
+offset_right = 99.0
+offset_bottom = 276.0
+grow_horizontal = 2
+pivot_offset = Vector2(262, 186)
+theme_override_colors/font_color = Color(0.0093103545, 0.0093103545, 0.0093103545, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dr236")
+
+[node name="LineEdit2" type="LineEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 365.0
+offset_right = 677.0
+offset_bottom = 405.0
+theme_override_colors/font_color = Color(0.0093103545, 0.0093103545, 0.0093103545, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_s25x5")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = -129.0
+offset_right = 50.0
+offset_bottom = -103.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 23
+text = "Enter Code:"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -5.0
+offset_right = 43.5
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.013724476
+theme_override_font_sizes/font_size = 23
+text = "Players:"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = 163.0
+offset_right = 24.0
+offset_bottom = 186.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_n5lge")
+text = "START"
