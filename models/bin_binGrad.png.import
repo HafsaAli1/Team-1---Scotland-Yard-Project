@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dipiq4p4i0dge"
-path.s3tc="res://.godot/imported/130_asphalt texture-seamless.jpg-c8b7954940abec914540a81d1fdf1f9c.s3tc.ctex"
+uid="uid://bxcdfacx5v58n"
+path.s3tc="res://.godot/imported/bin_binGrad.png-b84dd1de0d19c230256fdc3ec10965e4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "30c118421c3680ff9c519148a929b98e"
+}
 
 [deps]
 
-source_file="res://130_asphalt texture-seamless.jpg"
-dest_files=["res://.godot/imported/130_asphalt texture-seamless.jpg-c8b7954940abec914540a81d1fdf1f9c.s3tc.ctex"]
+source_file="res://models/bin_binGrad.png"
+dest_files=["res://.godot/imported/bin_binGrad.png-b84dd1de0d19c230256fdc3ec10965e4.s3tc.ctex"]
 
 [params]
 
@@ -33,7 +36,7 @@ process/channel_remap/green=1
 process/channel_remap/blue=2
 process/channel_remap/alpha=3
 process/fix_alpha_border=true
-process/premult_alpha=true
+process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false

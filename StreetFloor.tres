@@ -1,0 +1,15 @@
+[gd_resource type="ORMMaterial3D" load_steps=3 format=3 uid="uid://du0kql8pd8b72"]
+
+[ext_resource type="Texture2D" uid="uid://dipiq4p4i0dge" path="res://130_asphalt texture-seamless.jpg" id="1_1f2oj"]
+[ext_resource type="Texture2D" uid="uid://mdoi8exf30jt" path="res://PavementNormal.png" id="2_1cpqs"]
+
+[resource]
+diffuse_mode = 1
+albedo_texture = ExtResource("1_1f2oj")
+orm_texture = ExtResource("1_1f2oj")
+normal_enabled = true
+normal_scale = -5.06
+normal_texture = ExtResource("2_1cpqs")
+ao_enabled = true
+uv1_scale = Vector3(0.5, 1, 0.5)
+texture_filter = 4
