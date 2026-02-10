@@ -5,4 +5,4 @@ func _ready():
 	_draw_circle()
 
 func _draw_circle():
-	draw_circle(Vector2.ZERO, 50, Color.WHITE_SMOKE)  # radius 50, red
+	draw_circle(Vector2.ZERO, 50, Color.WHITE)  # radius 50, red
