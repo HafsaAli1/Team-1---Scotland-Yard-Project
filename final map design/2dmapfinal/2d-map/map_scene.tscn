@@ -6,15 +6,15 @@
 
 [node name="MapScene" type="Node2D"]
 
+[node name="MapBackground" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.99607843)
+scale = Vector2(1.8791, 1.816)
+texture = ExtResource("1_iuamg")
+metadata/_edit_lock_ = true
+
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(1.9, 1.816)
 zoom = Vector2(0.421, 0.421)
-
-[node name="MapBackground" type="Sprite2D" parent="Camera2D"]
-modulate = Color(1, 1, 1, 0.99607843)
-scale = Vector2(0.989, 1)
-texture = ExtResource("1_iuamg")
-metadata/_edit_lock_ = true
 
 [node name="Routes" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
