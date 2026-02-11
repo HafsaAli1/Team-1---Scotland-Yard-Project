@@ -30,15 +30,28 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _set_animation():
-	if velocity.z > 0.1: 
-		player.play("turnLeft")
-		while velocity.z > 0.1:
-			player.play("MoveLeft")
-	elif velocity.z < 0:
-		player.play("turnRight")
-		while velocity.z < 0:
-			player.play("MoveRight")
+	var count = 0
+	if velocity.x < 0:
+		if count == 0:
+			player.play("turnLeft")
+			#await player.animation_finished
+			count += 1
+		player.play("MoveLeft")
+		#await player.animation_finished
+		if velocity.x == 0:
+			player.play("returnFromLeft")
+			count -= 1
+	elif velocity.x > 0:
+		if count == 0:
+			player.play("turnRight")
+			#await player.animation_finished
+			count += 1
+		player.play("MoveRight")
+		#await player.animation_finished
+		if velocity.x == 0:
+			player.play("returnFromRight")
+			count -= 1
 	else:
-		player.play("idle")
+		player.play("Idle")
 
 	

@@ -1,5 +1,6 @@
-[gd_scene load_steps=171 format=4 uid="uid://b101tx86ypnx4"]
+[gd_scene load_steps=179 format=4 uid="uid://b101tx86ypnx4"]
 
+[ext_resource type="Script" uid="uid://rmi7tjbhhoe7" path="res://HTTP.gd" id="1_6xwum"]
 [ext_resource type="Environment" uid="uid://cfahwu7y2kj8y" path="res://env.tres" id="1_ksf64"]
 [ext_resource type="Material" uid="uid://du0kql8pd8b72" path="res://StreetFloor.tres" id="3_5tpnh"]
 [ext_resource type="Texture2D" uid="uid://dipiq4p4i0dge" path="res://130_asphalt texture-seamless.jpg" id="3_8hpcn"]
@@ -149,10 +150,17 @@
 [ext_resource type="Texture2D" uid="uid://komiw0gy6w5f" path="res://controls/LeftArrow.png" id="143_iuekc"]
 [ext_resource type="Texture2D" uid="uid://7gw7suo27rh" path="res://controls/LeftArrowGlow.png" id="144_iuekc"]
 [ext_resource type="Texture2D" uid="uid://dsfd1olti5npq" path="res://controls/RightArrow.png" id="145_h8eeo"]
+[ext_resource type="Texture2D" uid="uid://clwmqrd7dp4tn" path="res://playerMove/turnRight/trunRight_00000.png" id="146_74dcl"]
 [ext_resource type="Texture2D" uid="uid://dr13kskmspj3w" path="res://controls/RightArrowGlow.png" id="146_h8eeo"]
+[ext_resource type="Texture2D" uid="uid://bpby6o7fc8c2m" path="res://playerMove/turnRight/trunRight_00001.png" id="147_62tju"]
+[ext_resource type="Texture2D" uid="uid://c362ku1okymdf" path="res://playerMove/turnRight/trunRight_00002.png" id="148_djtot"]
 [ext_resource type="Script" uid="uid://cw1r4c1d7beyv" path="res://addons/portals/scripts/portal_3d.gd" id="148_ftsxn"]
 [ext_resource type="Material" uid="uid://dcfkcyddxkglf" path="res://addons/portals/materials/editor-preview-portal-material.tres" id="149_a0cqq"]
+[ext_resource type="Texture2D" uid="uid://bsk6v28tw41g0" path="res://playerMove/turnRight/trunRight_00003.png" id="149_rhhin"]
 [ext_resource type="Script" uid="uid://bxcel82b180o3" path="res://addons/portals/scripts/portal_boxmesh.gd" id="150_1dl48"]
+[ext_resource type="Texture2D" uid="uid://bw6nx15v34vgd" path="res://playerMove/turnRight/trunRight_00004.png" id="150_7hbci"]
+[ext_resource type="Texture2D" uid="uid://o1rjpayk17pg" path="res://playerMove/turnRight/trunRight_00005.png" id="151_dtfhx"]
+[ext_resource type="Texture2D" uid="uid://cph4byky0l8r7" path="res://playerMove/turnRight/trunRight_00006.png" id="152_sjot3"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_wwniw"]
 albedo_texture = ExtResource("4_ksf64")
@@ -622,6 +630,32 @@ animations = [{
 "loop": true,
 "name": &"turnLeft",
 "speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("146_74dcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_62tju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_djtot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_rhhin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_7hbci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_dtfhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_sjot3")
+}],
+"loop": true,
+"name": &"turnRight",
+"speed": 25.0
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h8eeo"]
@@ -646,6 +680,7 @@ size = Vector3(2, 2.5, 1)
 size = Vector3(2, 2.5, 1)
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_6xwum")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -950,16 +985,16 @@ alpha_cut = 1
 texture = ExtResource("129_npj4g")
 
 [node name="busShelter" parent="." instance=ExtResource("130_k4jpp")]
-transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 14.528204, 2.4599237, -1.6423476)
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 14.528204, 2.4599237, -2.6065266)
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.562807, 3.7560415, -0.4226576)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.562807, 3.7560415, -1.3868366)
 blend_distance = 0.0
 size = Vector3(507, 40, 24.185)
 enable_shadows = true
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.013874876, 0.99990374, 0, -0.99990374, 0.013874876, 14.779742, 6.1390996, 0)
+transform = Transform3D(1, 0, 0, 0, 0.013874876, 0.99990374, 0, -0.99990374, 0.013874876, 14.779742, 6.1390996, -0.96417904)
 light_color = Color(0.8139271, 0.8139268, 0, 1)
 light_energy = 5.0
 light_volumetric_fog_energy = 0.0
@@ -967,6 +1002,7 @@ light_size = 1.0
 spot_angle = 71.21
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.0449467)
 collision_layer = 32769
 collision_mask = 32769
 script = ExtResource("16_h8eeo")
@@ -977,7 +1013,7 @@ shaded = true
 alpha_cut = 1
 texture_filter = 4
 sprite_frames = SubResource("SpriteFrames_gypu2")
-animation = &"Idle"
+animation = &"turnRight"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.12674665, 2.0556393, -0.053417206)
@@ -1029,7 +1065,7 @@ action = "ui_right"
 [node name="Portal3D" type="Node3D" parent="." node_paths=PackedStringArray("exit_portal", "player_camera") groups=["portals"]]
 process_priority = 100
 process_physics_priority = 100
-transform = Transform3D(-1.1999242e-07, 0, 1, 0, 1.3834479, 0, -2.7451065, 0, -4.371139e-08, -11.927124, -2.1374345, -2.6438394)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.927124, -2.1374345, -1.3156719)
 script = ExtResource("148_ftsxn")
 _portal_mesh_path = NodePath("Portal3D_Mesh")
 _teleport_area_path = NodePath("TeleportArea")
@@ -1053,7 +1089,7 @@ metadata/_custom_type_script = "uid://cw1r4c1d7beyv"
 metadata/_edit_group_ = true
 
 [node name="Portal3D_Mesh" type="MeshInstance3D" parent="Portal3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.05, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0, 0)
 layers = 524288
 material_override = ExtResource("149_a0cqq")
 cast_shadow = 0
@@ -1100,3 +1136,5 @@ mesh = SubResource("ArrayMesh_5tpnh")
 
 [node name="Collider" type="CollisionShape3D" parent="Portal3D2/TeleportArea"]
 shape = SubResource("BoxShape3D_6xwum")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
