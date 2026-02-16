@@ -36,6 +36,7 @@ antialiased = true
 metadata/_edit_lock_ = true
 
 [node name="BlackOulinebus" type="Line2D" parent="Routes"]
+visible = false
 position = Vector2(-360.99997, -35)
 rotation = 0.6136019
 scale = Vector2(1.2359514, -6.489861)
