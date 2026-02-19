@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ol0kyhe3a3ro"
-path="res://.godot/imported/tile_0176.png-fc7455aa0525f75284645da5696f58b5.ctex"
+uid="uid://cdqo4tfmgyic6"
+path="res://.godot/imported/detective.png-1970df75e18723ae6d30e8ac9912a4d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/tile_0176.png"
-dest_files=["res://.godot/imported/tile_0176.png-fc7455aa0525f75284645da5696f58b5.ctex"]
+source_file="res://detective.png"
+dest_files=["res://.godot/imported/detective.png-1970df75e18723ae6d30e8ac9912a4d9.ctex"]
 
 [params]
 
