@@ -2741,6 +2741,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_w4tea")
 text = "Tickets"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="TaxiTicket" type="ColorRect" parent="CanvasLayer"]
 custom_minimum_size = Vector2(220, 140)
