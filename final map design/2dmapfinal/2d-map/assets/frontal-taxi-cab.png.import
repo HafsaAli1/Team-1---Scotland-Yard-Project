@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ol0kyhe3a3ro"
-path="res://.godot/imported/tile_0176.png-fc7455aa0525f75284645da5696f58b5.ctex"
+uid="uid://dhojsgqyh8li8"
+path="res://.godot/imported/frontal-taxi-cab.png-bae0d20ba415e553c289a8f0705c3e7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/tile_0176.png"
-dest_files=["res://.godot/imported/tile_0176.png-fc7455aa0525f75284645da5696f58b5.ctex"]
+source_file="res://assets/frontal-taxi-cab.png"
+dest_files=["res://.godot/imported/frontal-taxi-cab.png-bae0d20ba415e553c289a8f0705c3e7e.ctex"]
 
 [params]
 

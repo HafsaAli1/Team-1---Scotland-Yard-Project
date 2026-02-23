@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ol0kyhe3a3ro"
-path="res://.godot/imported/tile_0176.png-fc7455aa0525f75284645da5696f58b5.ctex"
+uid="uid://nd6nxqiu7pm"
+path="res://.godot/imported/london-metro-logo.png-3802cc848613579572470f1d658e5091.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/tile_0176.png"
-dest_files=["res://.godot/imported/tile_0176.png-fc7455aa0525f75284645da5696f58b5.ctex"]
+source_file="res://london-metro-logo.png"
+dest_files=["res://.godot/imported/london-metro-logo.png-3802cc848613579572470f1d658e5091.ctex"]
 
 [params]
 
