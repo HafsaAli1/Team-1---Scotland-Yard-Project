@@ -1,4 +1,4 @@
-[gd_scene load_steps=179 format=4 uid="uid://b101tx86ypnx4"]
+[gd_scene load_steps=181 format=4 uid="uid://b101tx86ypnx4"]
 
 [ext_resource type="Script" uid="uid://rmi7tjbhhoe7" path="res://HTTP.gd" id="1_6xwum"]
 [ext_resource type="Environment" uid="uid://cfahwu7y2kj8y" path="res://env.tres" id="1_ksf64"]
@@ -161,6 +161,7 @@
 [ext_resource type="Texture2D" uid="uid://bw6nx15v34vgd" path="res://playerMove/turnRight/trunRight_00004.png" id="150_7hbci"]
 [ext_resource type="Texture2D" uid="uid://o1rjpayk17pg" path="res://playerMove/turnRight/trunRight_00005.png" id="151_dtfhx"]
 [ext_resource type="Texture2D" uid="uid://cph4byky0l8r7" path="res://playerMove/turnRight/trunRight_00006.png" id="152_sjot3"]
+[ext_resource type="Shader" uid="uid://d1yks5ntkwwv" path="res://rail.gdshader" id="162_62tju"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_wwniw"]
 albedo_texture = ExtResource("4_ksf64")
@@ -679,6 +680,11 @@ size = Vector3(2, 2.5, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_6xwum"]
 size = Vector3(2, 2.5, 1)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_62tju"]
+render_priority = 0
+shader = ExtResource("162_62tju")
+shader_parameter/displacement_strength = 1.0
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_6xwum")
 
@@ -1138,3 +1144,8 @@ mesh = SubResource("ArrayMesh_5tpnh")
 shape = SubResource("BoxShape3D_6xwum")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 105.42472, -0.3727417, 42.40435)
+size = Vector3(4.16745, 0.2545166, 25.666931)
+material = SubResource("ShaderMaterial_62tju")
