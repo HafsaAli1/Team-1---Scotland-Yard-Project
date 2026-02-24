@@ -121,10 +121,12 @@ position = Vector2(4, -7)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("2_w4tea")
 
-[node name="station1" type="Node2D" parent="."]
+[node name="Stations" type="Node2D" parent="."]
+
+[node name="station1" type="Node2D" parent="Stations"]
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station1"]
+[node name="number" type="Label" parent="Stations/station1"]
 top_level = true
 offset_left = -98.0
 offset_top = 255.0
@@ -135,7 +137,7 @@ theme_override_font_sizes/font_size = 35
 text = "1"
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station1"]
+[node name="circle" type="Node2D" parent="Stations/station1"]
 position = Vector2(-90, 279)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -145,11 +147,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station2" type="Node2D" parent="."]
+[node name="station2" type="Node2D" parent="Stations"]
 position = Vector2(34, 34)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station2"]
+[node name="number" type="Label" parent="Stations/station2"]
 top_level = true
 offset_left = -12.0
 offset_top = 180.0
@@ -160,7 +162,7 @@ theme_override_font_sizes/font_size = 35
 text = "2"
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station2"]
+[node name="circle" type="Node2D" parent="Stations/station2"]
 position = Vector2(-37, 170)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -170,12 +172,12 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station3" type="Node2D" parent="."]
+[node name="station3" type="Node2D" parent="Stations"]
 position = Vector2(34, 34)
 script = ExtResource("2_eobcy")
 metadata/_edit_lock_ = true
 
-[node name="number" type="Label" parent="station3"]
+[node name="number" type="Label" parent="Stations/station3"]
 top_level = true
 offset_left = 306.0
 offset_top = 146.0
@@ -186,7 +188,7 @@ theme_override_font_sizes/font_size = 35
 text = "3"
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station3"]
+[node name="circle" type="Node2D" parent="Stations/station3"]
 position = Vector2(280, 135)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -196,11 +198,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station4" type="Node2D" parent="."]
+[node name="station4" type="Node2D" parent="Stations"]
 position = Vector2(34, 34)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station4"]
+[node name="number" type="Label" parent="Stations/station4"]
 top_level = true
 offset_left = 274.0
 offset_top = -50.0
@@ -211,7 +213,7 @@ theme_override_font_sizes/font_size = 35
 text = "4"
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station4"]
+[node name="circle" type="Node2D" parent="Stations/station4"]
 position = Vector2(251, -58)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -221,11 +223,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station5" type="Node2D" parent="."]
+[node name="station5" type="Node2D" parent="Stations"]
 position = Vector2(34, 34)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station5"]
+[node name="number" type="Label" parent="Stations/station5"]
 top_level = true
 offset_left = 514.0
 offset_top = -60.0
@@ -236,7 +238,7 @@ theme_override_font_sizes/font_size = 35
 text = "5"
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station5"]
+[node name="circle" type="Node2D" parent="Stations/station5"]
 position = Vector2(489, -71)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -246,37 +248,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station6" type="Node2D" parent="."]
-position = Vector2(34, 34)
-script = ExtResource("2_eobcy")
-
-[node name="number" type="Label" parent="station6"]
-top_level = true
-offset_left = -166.0
-offset_top = -69.0
-offset_right = -126.0
-offset_bottom = 32.0
-theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
-theme_override_font_sizes/font_size = 35
-text = "6
-"
-metadata/_edit_lock_ = true
-
-[node name="circle" type="Node2D" parent="station6"]
-position = Vector2(-190, -77)
-script = ExtResource("3_w4tea")
-radius_x = 40.0
-radius_y = 25.0
-fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
-outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
-outline_width = 5.0
-metadata/_edit_lock_ = true
-
-[node name="station7" type="Node2D" parent="."]
+[node name="station7" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station7"]
+[node name="number" type="Label" parent="Stations/station7"]
 top_level = true
 offset_left = -313.0
 offset_top = -151.0
@@ -289,7 +265,7 @@ text = "7
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station7"]
+[node name="circle" type="Node2D" parent="Stations/station7"]
 position = Vector2(56, 10)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -299,11 +275,37 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station8" type="Node2D" parent="."]
+[node name="station6" type="Node2D" parent="Stations"]
+position = Vector2(34, 34)
+script = ExtResource("2_eobcy")
+
+[node name="number" type="Label" parent="Stations/station6"]
+top_level = true
+offset_left = -166.0
+offset_top = -69.0
+offset_right = -126.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
+theme_override_font_sizes/font_size = 35
+text = "6
+"
+metadata/_edit_lock_ = true
+
+[node name="circle" type="Node2D" parent="Stations/station6"]
+position = Vector2(-190, -77)
+script = ExtResource("3_w4tea")
+radius_x = 40.0
+radius_y = 25.0
+fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
+outline_width = 5.0
+metadata/_edit_lock_ = true
+
+[node name="station8" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station8"]
+[node name="number" type="Label" parent="Stations/station8"]
 top_level = true
 offset_left = -178.0
 offset_top = -252.0
@@ -316,7 +318,7 @@ text = "8
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station8"]
+[node name="circle" type="Node2D" parent="Stations/station8"]
 position = Vector2(183, -91)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -326,11 +328,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station9" type="Node2D" parent="."]
+[node name="station9" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station9"]
+[node name="number" type="Label" parent="Stations/station9"]
 top_level = true
 offset_left = -1.0
 offset_top = -278.0
@@ -342,7 +344,7 @@ text = "9
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station9"]
+[node name="circle" type="Node2D" parent="Stations/station9"]
 position = Vector2(367, -114)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -352,11 +354,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station10" type="Node2D" parent="."]
+[node name="station10" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station10"]
+[node name="number" type="Label" parent="Stations/station10"]
 top_level = true
 offset_left = 55.0
 offset_top = -375.0
@@ -368,7 +370,7 @@ text = "10
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station10"]
+[node name="circle" type="Node2D" parent="Stations/station10"]
 position = Vector2(433, -211)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -378,11 +380,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station11" type="Node2D" parent="."]
+[node name="station11" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station11"]
+[node name="number" type="Label" parent="Stations/station11"]
 top_level = true
 offset_left = 356.0
 offset_top = -344.0
@@ -394,7 +396,7 @@ text = "11
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station11"]
+[node name="circle" type="Node2D" parent="Stations/station11"]
 position = Vector2(733, -180)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -404,11 +406,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station12" type="Node2D" parent="."]
+[node name="station12" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station12"]
+[node name="number" type="Label" parent="Stations/station12"]
 top_level = true
 offset_left = 346.0
 offset_top = -234.0
@@ -420,7 +422,7 @@ text = "12
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station12"]
+[node name="circle" type="Node2D" parent="Stations/station12"]
 position = Vector2(725, -70)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -430,11 +432,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station13" type="Node2D" parent="."]
+[node name="station13" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station13"]
+[node name="number" type="Label" parent="Stations/station13"]
 top_level = true
 offset_left = 643.0
 offset_top = -223.0
@@ -446,7 +448,7 @@ text = "13
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station13"]
+[node name="circle" type="Node2D" parent="Stations/station13"]
 position = Vector2(1018, -58)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -456,11 +458,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station14" type="Node2D" parent="."]
+[node name="station14" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station14"]
+[node name="number" type="Label" parent="Stations/station14"]
 top_level = true
 offset_left = 753.0
 offset_top = -157.0
@@ -472,7 +474,7 @@ text = "14
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station14"]
+[node name="circle" type="Node2D" parent="Stations/station14"]
 position = Vector2(1129, 5)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -482,11 +484,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station15" type="Node2D" parent="."]
+[node name="station15" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station15"]
+[node name="number" type="Label" parent="Stations/station15"]
 top_level = true
 offset_left = 643.0
 offset_top = -75.0
@@ -498,7 +500,7 @@ text = "15
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station15"]
+[node name="circle" type="Node2D" parent="Stations/station15"]
 position = Vector2(1016, 87)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -508,11 +510,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station16" type="Node2D" parent="."]
+[node name="station16" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station16"]
+[node name="number" type="Label" parent="Stations/station16"]
 top_level = true
 offset_left = 717.0
 offset_top = -28.0
@@ -524,7 +526,7 @@ text = "16
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station16"]
+[node name="circle" type="Node2D" parent="Stations/station16"]
 position = Vector2(1100, 135)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -534,11 +536,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station17" type="Node2D" parent="."]
+[node name="station17" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station17"]
+[node name="number" type="Label" parent="Stations/station17"]
 top_level = true
 offset_left = 798.0
 offset_top = 91.0
@@ -550,7 +552,7 @@ text = "17
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station17"]
+[node name="circle" type="Node2D" parent="Stations/station17"]
 position = Vector2(1172, 253)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -560,11 +562,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station18" type="Node2D" parent="."]
+[node name="station18" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station18"]
+[node name="number" type="Label" parent="Stations/station18"]
 top_level = true
 offset_left = 787.0
 offset_top = 189.0
@@ -576,7 +578,7 @@ text = "18
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station18"]
+[node name="circle" type="Node2D" parent="Stations/station18"]
 position = Vector2(1164, 353)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -586,11 +588,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station19" type="Node2D" parent="."]
+[node name="station19" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station19"]
+[node name="number" type="Label" parent="Stations/station19"]
 top_level = true
 offset_left = 611.0
 offset_top = 229.0
@@ -602,7 +604,7 @@ text = "19
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station19"]
+[node name="circle" type="Node2D" parent="Stations/station19"]
 position = Vector2(987, 390)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -612,11 +614,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station20" type="Node2D" parent="."]
+[node name="station20" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station20"]
+[node name="number" type="Label" parent="Stations/station20"]
 top_level = true
 offset_left = 514.0
 offset_top = 274.0
@@ -628,7 +630,7 @@ text = "20
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station20"]
+[node name="circle" type="Node2D" parent="Stations/station20"]
 position = Vector2(890, 440)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -638,11 +640,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station21" type="Node2D" parent="."]
+[node name="station21" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station21"]
+[node name="number" type="Label" parent="Stations/station21"]
 top_level = true
 offset_left = 469.0
 offset_top = 369.0
@@ -654,7 +656,7 @@ text = "21
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station21"]
+[node name="circle" type="Node2D" parent="Stations/station21"]
 position = Vector2(843, 529)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -664,11 +666,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station22" type="Node2D" parent="."]
+[node name="station22" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station22"]
+[node name="number" type="Label" parent="Stations/station22"]
 top_level = true
 offset_left = 292.0
 offset_top = 377.0
@@ -680,7 +682,7 @@ text = "22
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station22"]
+[node name="circle" type="Node2D" parent="Stations/station22"]
 position = Vector2(671, 540)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -690,11 +692,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station23" type="Node2D" parent="."]
+[node name="station23" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station23"]
+[node name="number" type="Label" parent="Stations/station23"]
 top_level = true
 offset_left = 182.0
 offset_top = 271.0
@@ -706,7 +708,7 @@ text = "23
 "
 metadata/_edit_lock_ = true
 
-[node name="circle" type="Node2D" parent="station23"]
+[node name="circle" type="Node2D" parent="Stations/station23"]
 position = Vector2(558, 434)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -716,11 +718,11 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 metadata/_edit_lock_ = true
 
-[node name="station24" type="Node2D" parent="."]
+[node name="station24" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station24"]
+[node name="number" type="Label" parent="Stations/station24"]
 top_level = true
 offset_left = -225.0
 offset_top = 189.0
@@ -731,7 +733,7 @@ theme_override_font_sizes/font_size = 35
 text = "24
 "
 
-[node name="circle" type="Node2D" parent="station24"]
+[node name="circle" type="Node2D" parent="Stations/station24"]
 position = Vector2(151, 352)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -740,11 +742,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station25" type="Node2D" parent="."]
+[node name="station25" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station25"]
+[node name="number" type="Label" parent="Stations/station25"]
 top_level = true
 offset_left = -330.0
 offset_top = 9.0
@@ -755,7 +757,7 @@ theme_override_font_sizes/font_size = 35
 text = "25
 "
 
-[node name="circle" type="Node2D" parent="station25"]
+[node name="circle" type="Node2D" parent="Stations/station25"]
 position = Vector2(46, 173)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -764,11 +766,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station26" type="Node2D" parent="."]
+[node name="station26" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station26"]
+[node name="number" type="Label" parent="Stations/station26"]
 top_level = true
 offset_left = -478.0
 offset_top = -91.0
@@ -779,7 +781,7 @@ theme_override_font_sizes/font_size = 35
 text = "26
 "
 
-[node name="circle" type="Node2D" parent="station26"]
+[node name="circle" type="Node2D" parent="Stations/station26"]
 position = Vector2(-105, 70)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -788,11 +790,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station27" type="Node2D" parent="."]
+[node name="station27" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station27"]
+[node name="number" type="Label" parent="Stations/station27"]
 top_level = true
 offset_left = -473.0
 offset_top = 93.0
@@ -803,7 +805,7 @@ theme_override_font_sizes/font_size = 35
 text = "27
 "
 
-[node name="circle" type="Node2D" parent="station27"]
+[node name="circle" type="Node2D" parent="Stations/station27"]
 position = Vector2(-102, 257)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -812,11 +814,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station28" type="Node2D" parent="."]
+[node name="station28" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station28"]
+[node name="number" type="Label" parent="Stations/station28"]
 top_level = true
 offset_left = -687.0
 offset_top = 220.0
@@ -827,7 +829,7 @@ theme_override_font_sizes/font_size = 35
 text = "28
 "
 
-[node name="circle" type="Node2D" parent="station28"]
+[node name="circle" type="Node2D" parent="Stations/station28"]
 position = Vector2(-313, 383)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -836,11 +838,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station29" type="Node2D" parent="."]
+[node name="station29" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station29"]
+[node name="number" type="Label" parent="Stations/station29"]
 top_level = true
 offset_left = -848.0
 offset_top = 384.0
@@ -851,7 +853,7 @@ theme_override_font_sizes/font_size = 35
 text = "29
 "
 
-[node name="circle" type="Node2D" parent="station29"]
+[node name="circle" type="Node2D" parent="Stations/station29"]
 position = Vector2(-474, 547)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -860,11 +862,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station30" type="Node2D" parent="."]
+[node name="station30" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station30"]
+[node name="number" type="Label" parent="Stations/station30"]
 top_level = true
 offset_left = -838.0
 offset_top = 233.0
@@ -875,7 +877,7 @@ theme_override_font_sizes/font_size = 35
 text = "30
 "
 
-[node name="circle" type="Node2D" parent="station30"]
+[node name="circle" type="Node2D" parent="Stations/station30"]
 position = Vector2(-464, 396)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -884,11 +886,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station31" type="Node2D" parent="."]
+[node name="station31" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station31"]
+[node name="number" type="Label" parent="Stations/station31"]
 top_level = true
 offset_left = -693.0
 offset_top = 82.0
@@ -899,7 +901,7 @@ theme_override_font_sizes/font_size = 35
 text = "31
 "
 
-[node name="circle" type="Node2D" parent="station31"]
+[node name="circle" type="Node2D" parent="Stations/station31"]
 position = Vector2(-319, 243)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -908,11 +910,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station32" type="Node2D" parent="."]
+[node name="station32" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station32"]
+[node name="number" type="Label" parent="Stations/station32"]
 top_level = true
 offset_left = -662.0
 offset_top = -218.0
@@ -923,7 +925,7 @@ theme_override_font_sizes/font_size = 35
 text = "32
 "
 
-[node name="circle" type="Node2D" parent="station32"]
+[node name="circle" type="Node2D" parent="Stations/station32"]
 position = Vector2(-288, -57)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -932,11 +934,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station33" type="Node2D" parent="."]
+[node name="station33" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station33"]
+[node name="number" type="Label" parent="Stations/station33"]
 top_level = true
 offset_left = -652.0
 offset_top = -316.0
@@ -947,7 +949,7 @@ theme_override_font_sizes/font_size = 35
 text = "33
 "
 
-[node name="circle" type="Node2D" parent="station33"]
+[node name="circle" type="Node2D" parent="Stations/station33"]
 position = Vector2(-278, -154)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -956,11 +958,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station34" type="Node2D" parent="."]
+[node name="station34" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station34"]
+[node name="number" type="Label" parent="Stations/station34"]
 top_level = true
 offset_left = -801.0
 offset_top = -209.0
@@ -971,7 +973,7 @@ theme_override_font_sizes/font_size = 35
 text = "34
 "
 
-[node name="circle" type="Node2D" parent="station34"]
+[node name="circle" type="Node2D" parent="Stations/station34"]
 position = Vector2(-428, -46)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -980,11 +982,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station35" type="Node2D" parent="."]
+[node name="station35" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station35"]
+[node name="number" type="Label" parent="Stations/station35"]
 top_level = true
 offset_left = -1075.0
 offset_top = -106.0
@@ -995,7 +997,7 @@ theme_override_font_sizes/font_size = 35
 text = "35
 "
 
-[node name="circle" type="Node2D" parent="station35"]
+[node name="circle" type="Node2D" parent="Stations/station35"]
 position = Vector2(-697, 55)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1004,11 +1006,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station36" type="Node2D" parent="."]
+[node name="station36" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station36"]
+[node name="number" type="Label" parent="Stations/station36"]
 top_level = true
 offset_left = -957.0
 offset_top = 28.0
@@ -1019,7 +1021,7 @@ theme_override_font_sizes/font_size = 35
 text = "36
 "
 
-[node name="circle" type="Node2D" parent="station36"]
+[node name="circle" type="Node2D" parent="Stations/station36"]
 position = Vector2(-581, 190)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1028,11 +1030,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station37" type="Node2D" parent="."]
+[node name="station37" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station37"]
+[node name="number" type="Label" parent="Stations/station37"]
 top_level = true
 offset_left = -1150.0
 offset_top = -508.0
@@ -1043,7 +1045,7 @@ theme_override_font_sizes/font_size = 35
 text = "37
 "
 
-[node name="circle" type="Node2D" parent="station37"]
+[node name="circle" type="Node2D" parent="Stations/station37"]
 position = Vector2(-774, -345)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1052,11 +1054,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station38" type="Node2D" parent="."]
+[node name="station38" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station38"]
+[node name="number" type="Label" parent="Stations/station38"]
 top_level = true
 offset_left = -1062.0
 offset_top = -562.0
@@ -1067,7 +1069,7 @@ theme_override_font_sizes/font_size = 35
 text = "38
 "
 
-[node name="circle" type="Node2D" parent="station38"]
+[node name="circle" type="Node2D" parent="Stations/station38"]
 position = Vector2(-686, -399)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1076,11 +1078,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station39" type="Node2D" parent="."]
+[node name="station39" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station39"]
+[node name="number" type="Label" parent="Stations/station39"]
 top_level = true
 offset_left = -884.0
 offset_top = -502.0
@@ -1091,7 +1093,7 @@ theme_override_font_sizes/font_size = 35
 text = "39
 "
 
-[node name="circle" type="Node2D" parent="station39"]
+[node name="circle" type="Node2D" parent="Stations/station39"]
 position = Vector2(-510, -341)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1100,11 +1102,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station40" type="Node2D" parent="."]
+[node name="station40" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station40"]
+[node name="number" type="Label" parent="Stations/station40"]
 top_level = true
 offset_left = -755.0
 offset_top = -528.0
@@ -1115,7 +1117,7 @@ theme_override_font_sizes/font_size = 35
 text = "40
 "
 
-[node name="circle" type="Node2D" parent="station40"]
+[node name="circle" type="Node2D" parent="Stations/station40"]
 position = Vector2(-375, -367)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1124,11 +1126,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station41" type="Node2D" parent="."]
+[node name="station41" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station41"]
+[node name="number" type="Label" parent="Stations/station41"]
 top_level = true
 offset_left = -616.0
 offset_top = -464.0
@@ -1139,7 +1141,7 @@ theme_override_font_sizes/font_size = 35
 text = "41
 "
 
-[node name="circle" type="Node2D" parent="station41"]
+[node name="circle" type="Node2D" parent="Stations/station41"]
 position = Vector2(-240, -301)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1148,59 +1150,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station42" type="Node2D" parent="."]
+[node name="station44" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station42"]
-top_level = true
-offset_left = -520.0
-offset_top = -717.0
-offset_right = -480.0
-offset_bottom = -564.0
-theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
-theme_override_font_sizes/font_size = 35
-text = "42
-"
-
-[node name="circle" type="Node2D" parent="station42"]
-position = Vector2(-146, -552)
-script = ExtResource("3_w4tea")
-radius_x = 40.0
-radius_y = 25.0
-fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
-outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
-outline_width = 5.0
-
-[node name="station43" type="Node2D" parent="."]
-position = Vector2(-355, -137)
-script = ExtResource("2_eobcy")
-
-[node name="number" type="Label" parent="station43"]
-top_level = true
-offset_left = -355.0
-offset_top = -704.0
-offset_right = -315.0
-offset_bottom = -551.0
-theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
-theme_override_font_sizes/font_size = 35
-text = "43
-"
-
-[node name="circle" type="Node2D" parent="station43"]
-position = Vector2(21, -541)
-script = ExtResource("3_w4tea")
-radius_x = 40.0
-radius_y = 25.0
-fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
-outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
-outline_width = 5.0
-
-[node name="station44" type="Node2D" parent="."]
-position = Vector2(-355, -137)
-script = ExtResource("2_eobcy")
-
-[node name="number" type="Label" parent="station44"]
+[node name="number" type="Label" parent="Stations/station44"]
 top_level = true
 offset_left = -218.0
 offset_top = -631.0
@@ -1211,7 +1165,7 @@ theme_override_font_sizes/font_size = 35
 text = "44
 "
 
-[node name="circle" type="Node2D" parent="station44"]
+[node name="circle" type="Node2D" parent="Stations/station44"]
 position = Vector2(156, -466)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1220,11 +1174,59 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station45" type="Node2D" parent="."]
+[node name="station42" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station45"]
+[node name="number" type="Label" parent="Stations/station42"]
+top_level = true
+offset_left = -520.0
+offset_top = -717.0
+offset_right = -480.0
+offset_bottom = -564.0
+theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
+theme_override_font_sizes/font_size = 35
+text = "42
+"
+
+[node name="circle" type="Node2D" parent="Stations/station42"]
+position = Vector2(-146, -552)
+script = ExtResource("3_w4tea")
+radius_x = 40.0
+radius_y = 25.0
+fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
+outline_width = 5.0
+
+[node name="station43" type="Node2D" parent="Stations"]
+position = Vector2(-355, -137)
+script = ExtResource("2_eobcy")
+
+[node name="number" type="Label" parent="Stations/station43"]
+top_level = true
+offset_left = -355.0
+offset_top = -704.0
+offset_right = -315.0
+offset_bottom = -551.0
+theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
+theme_override_font_sizes/font_size = 35
+text = "43
+"
+
+[node name="circle" type="Node2D" parent="Stations/station43"]
+position = Vector2(21, -541)
+script = ExtResource("3_w4tea")
+radius_x = 40.0
+radius_y = 25.0
+fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
+outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
+outline_width = 5.0
+
+[node name="station45" type="Node2D" parent="Stations"]
+position = Vector2(-355, -137)
+script = ExtResource("2_eobcy")
+
+[node name="number" type="Label" parent="Stations/station45"]
 top_level = true
 offset_left = -214.0
 offset_top = -395.0
@@ -1235,7 +1237,7 @@ theme_override_font_sizes/font_size = 35
 text = "45
 "
 
-[node name="circle" type="Node2D" parent="station45"]
+[node name="circle" type="Node2D" parent="Stations/station45"]
 position = Vector2(162, -232)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1244,11 +1246,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station46" type="Node2D" parent="."]
+[node name="station46" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station46"]
+[node name="number" type="Label" parent="Stations/station46"]
 top_level = true
 offset_left = -383.0
 offset_top = -399.0
@@ -1259,7 +1261,7 @@ theme_override_font_sizes/font_size = 35
 text = "46
 "
 
-[node name="circle" type="Node2D" parent="station46"]
+[node name="circle" type="Node2D" parent="Stations/station46"]
 position = Vector2(-5, -234)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1268,11 +1270,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station47" type="Node2D" parent="."]
+[node name="station47" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station47"]
+[node name="number" type="Label" parent="Stations/station47"]
 top_level = true
 offset_left = -574.0
 offset_top = -266.0
@@ -1283,7 +1285,7 @@ theme_override_font_sizes/font_size = 35
 text = "47
 "
 
-[node name="circle" type="Node2D" parent="station47"]
+[node name="circle" type="Node2D" parent="Stations/station47"]
 position = Vector2(-196, -103)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1292,11 +1294,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station48" type="Node2D" parent="."]
+[node name="station48" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station48"]
+[node name="number" type="Label" parent="Stations/station48"]
 top_level = true
 offset_left = -433.0
 offset_top = -277.0
@@ -1307,7 +1309,7 @@ theme_override_font_sizes/font_size = 35
 text = "48
 "
 
-[node name="circle" type="Node2D" parent="station48"]
+[node name="circle" type="Node2D" parent="Stations/station48"]
 position = Vector2(-52, -112)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1316,11 +1318,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station49" type="Node2D" parent="."]
+[node name="station49" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station49"]
+[node name="number" type="Label" parent="Stations/station49"]
 top_level = true
 offset_left = 289.0
 offset_top = -519.0
@@ -1331,7 +1333,7 @@ theme_override_font_sizes/font_size = 35
 text = "49
 "
 
-[node name="circle" type="Node2D" parent="station49"]
+[node name="circle" type="Node2D" parent="Stations/station49"]
 position = Vector2(664, -356)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1340,11 +1342,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station50" type="Node2D" parent="."]
+[node name="station50" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station50"]
+[node name="number" type="Label" parent="Stations/station50"]
 top_level = true
 offset_left = 139.0
 offset_top = -716.0
@@ -1354,7 +1356,7 @@ theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.003519167
 theme_override_font_sizes/font_size = 35
 text = "50"
 
-[node name="circle" type="Node2D" parent="station50"]
+[node name="circle" type="Node2D" parent="Stations/station50"]
 position = Vector2(516, -556)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1363,11 +1365,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station51" type="Node2D" parent="."]
+[node name="station51" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station51"]
+[node name="number" type="Label" parent="Stations/station51"]
 top_level = true
 offset_left = 154.0
 offset_top = -558.0
@@ -1378,7 +1380,7 @@ theme_override_font_sizes/font_size = 35
 text = "51
 "
 
-[node name="circle" type="Node2D" parent="station51"]
+[node name="circle" type="Node2D" parent="Stations/station51"]
 position = Vector2(531, -395)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1387,11 +1389,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station52" type="Node2D" parent="."]
+[node name="station52" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station52"]
+[node name="number" type="Label" parent="Stations/station52"]
 top_level = true
 offset_left = 561.0
 offset_top = -496.0
@@ -1402,7 +1404,7 @@ theme_override_font_sizes/font_size = 35
 text = "52
 "
 
-[node name="circle" type="Node2D" parent="station52"]
+[node name="circle" type="Node2D" parent="Stations/station52"]
 position = Vector2(940, -335)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1411,11 +1413,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station53" type="Node2D" parent="."]
+[node name="station53" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station53"]
+[node name="number" type="Label" parent="Stations/station53"]
 top_level = true
 offset_left = 656.0
 offset_top = -432.0
@@ -1426,7 +1428,7 @@ theme_override_font_sizes/font_size = 35
 text = "53
 "
 
-[node name="circle" type="Node2D" parent="station53"]
+[node name="circle" type="Node2D" parent="Stations/station53"]
 position = Vector2(1033, -269)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1435,11 +1437,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station54" type="Node2D" parent="."]
+[node name="station54" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station54"]
+[node name="number" type="Label" parent="Stations/station54"]
 top_level = true
 offset_left = 825.0
 offset_top = -389.0
@@ -1450,7 +1452,7 @@ theme_override_font_sizes/font_size = 35
 text = "54
 "
 
-[node name="circle" type="Node2D" parent="station54"]
+[node name="circle" type="Node2D" parent="Stations/station54"]
 position = Vector2(1196, -224)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1459,11 +1461,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station55" type="Node2D" parent="."]
+[node name="station55" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station55"]
+[node name="number" type="Label" parent="Stations/station55"]
 top_level = true
 offset_left = 304.0
 offset_top = -442.0
@@ -1474,7 +1476,7 @@ theme_override_font_sizes/font_size = 35
 text = "55
 "
 
-[node name="circle" type="Node2D" parent="station55"]
+[node name="circle" type="Node2D" parent="Stations/station55"]
 position = Vector2(681, -279)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1483,11 +1485,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station56" type="Node2D" parent="."]
+[node name="station56" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station56"]
+[node name="number" type="Label" parent="Stations/station56"]
 top_level = true
 offset_left = 413.0
 offset_top = -517.0
@@ -1498,7 +1500,7 @@ theme_override_font_sizes/font_size = 35
 text = "56
 "
 
-[node name="circle" type="Node2D" parent="station56"]
+[node name="circle" type="Node2D" parent="Stations/station56"]
 position = Vector2(786, -356)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1507,11 +1509,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station57" type="Node2D" parent="."]
+[node name="station57" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station57"]
+[node name="number" type="Label" parent="Stations/station57"]
 top_level = true
 offset_left = 669.0
 offset_top = -675.0
@@ -1522,7 +1524,7 @@ theme_override_font_sizes/font_size = 35
 text = "57
 "
 
-[node name="circle" type="Node2D" parent="station57"]
+[node name="circle" type="Node2D" parent="Stations/station57"]
 position = Vector2(1052, -515)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1531,11 +1533,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station58" type="Node2D" parent="."]
+[node name="station58" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station58"]
+[node name="number" type="Label" parent="Stations/station58"]
 top_level = true
 offset_left = 764.0
 offset_top = -709.0
@@ -1546,7 +1548,7 @@ theme_override_font_sizes/font_size = 35
 text = "58
 "
 
-[node name="circle" type="Node2D" parent="station58"]
+[node name="circle" type="Node2D" parent="Stations/station58"]
 position = Vector2(1142, -548)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1555,11 +1557,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station59" type="Node2D" parent="."]
+[node name="station59" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station59"]
+[node name="number" type="Label" parent="Stations/station59"]
 top_level = true
 offset_left = 860.0
 offset_top = -501.0
@@ -1570,7 +1572,7 @@ theme_override_font_sizes/font_size = 35
 text = "59
 "
 
-[node name="circle" type="Node2D" parent="station59"]
+[node name="circle" type="Node2D" parent="Stations/station59"]
 position = Vector2(1238, -338)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1579,11 +1581,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station60" type="Node2D" parent="."]
+[node name="station60" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station60"]
+[node name="number" type="Label" parent="Stations/station60"]
 top_level = true
 offset_left = 1078.0
 offset_top = -471.0
@@ -1594,7 +1596,7 @@ theme_override_font_sizes/font_size = 35
 text = "60
 "
 
-[node name="circle" type="Node2D" parent="station60"]
+[node name="circle" type="Node2D" parent="Stations/station60"]
 position = Vector2(1455, -312)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1603,11 +1605,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station61" type="Node2D" parent="."]
+[node name="station61" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station61"]
+[node name="number" type="Label" parent="Stations/station61"]
 top_level = true
 offset_left = 882.0
 offset_top = -629.0
@@ -1618,7 +1620,7 @@ theme_override_font_sizes/font_size = 35
 text = "61
 "
 
-[node name="circle" type="Node2D" parent="station61"]
+[node name="circle" type="Node2D" parent="Stations/station61"]
 position = Vector2(1252, -463)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1627,11 +1629,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station62" type="Node2D" parent="."]
+[node name="station62" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station62"]
+[node name="number" type="Label" parent="Stations/station62"]
 top_level = true
 offset_left = 556.0
 offset_top = -396.0
@@ -1642,7 +1644,7 @@ theme_override_font_sizes/font_size = 35
 text = "62
 "
 
-[node name="circle" type="Node2D" parent="station62"]
+[node name="circle" type="Node2D" parent="Stations/station62"]
 position = Vector2(935, -230)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1651,11 +1653,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station63" type="Node2D" parent="."]
+[node name="station63" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station63"]
+[node name="number" type="Label" parent="Stations/station63"]
 top_level = true
 offset_left = 1134.0
 offset_top = -556.0
@@ -1666,7 +1668,7 @@ theme_override_font_sizes/font_size = 35
 text = "63
 "
 
-[node name="circle" type="Node2D" parent="station63"]
+[node name="circle" type="Node2D" parent="Stations/station63"]
 position = Vector2(1506, -397)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1675,11 +1677,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station64" type="Node2D" parent="."]
+[node name="station64" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station64"]
+[node name="number" type="Label" parent="Stations/station64"]
 top_level = true
 offset_left = 1069.0
 offset_top = -229.0
@@ -1690,7 +1692,7 @@ theme_override_font_sizes/font_size = 35
 text = "64
 "
 
-[node name="circle" type="Node2D" parent="station64"]
+[node name="circle" type="Node2D" parent="Stations/station64"]
 position = Vector2(1445, -64)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1699,11 +1701,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station65" type="Node2D" parent="."]
+[node name="station65" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station65"]
+[node name="number" type="Label" parent="Stations/station65"]
 top_level = true
 offset_left = 1187.0
 offset_top = -370.0
@@ -1714,7 +1716,7 @@ theme_override_font_sizes/font_size = 35
 text = "65
 "
 
-[node name="circle" type="Node2D" parent="station65"]
+[node name="circle" type="Node2D" parent="Stations/station65"]
 position = Vector2(1559, -207)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1723,11 +1725,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station66" type="Node2D" parent="."]
+[node name="station66" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station66"]
+[node name="number" type="Label" parent="Stations/station66"]
 top_level = true
 offset_left = 1086.0
 offset_top = -361.0
@@ -1738,7 +1740,7 @@ theme_override_font_sizes/font_size = 35
 text = "66
 "
 
-[node name="circle" type="Node2D" parent="station66"]
+[node name="circle" type="Node2D" parent="Stations/station66"]
 position = Vector2(1460, -200)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1747,11 +1749,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station67" type="Node2D" parent="."]
+[node name="station67" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station67"]
+[node name="number" type="Label" parent="Stations/station67"]
 top_level = true
 offset_left = 897.0
 offset_top = -298.0
@@ -1762,7 +1764,7 @@ theme_override_font_sizes/font_size = 35
 text = "67
 "
 
-[node name="circle" type="Node2D" parent="station67"]
+[node name="circle" type="Node2D" parent="Stations/station67"]
 position = Vector2(1273, -137)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1771,11 +1773,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station68" type="Node2D" parent="."]
+[node name="station68" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station68"]
+[node name="number" type="Label" parent="Stations/station68"]
 top_level = true
 offset_left = 897.0
 offset_top = 292.0
@@ -1786,7 +1788,7 @@ theme_override_font_sizes/font_size = 35
 text = "68
 "
 
-[node name="circle" type="Node2D" parent="station68"]
+[node name="circle" type="Node2D" parent="Stations/station68"]
 position = Vector2(1270, 453)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1795,11 +1797,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station69" type="Node2D" parent="."]
+[node name="station69" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station69"]
+[node name="number" type="Label" parent="Stations/station69"]
 top_level = true
 offset_left = 527.0
 offset_top = -152.0
@@ -1810,7 +1812,7 @@ theme_override_font_sizes/font_size = 35
 text = "69
 "
 
-[node name="circle" type="Node2D" parent="station69"]
+[node name="circle" type="Node2D" parent="Stations/station69"]
 position = Vector2(903, 12)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1819,11 +1821,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station70" type="Node2D" parent="."]
+[node name="station70" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station70"]
+[node name="number" type="Label" parent="Stations/station70"]
 top_level = true
 offset_left = 896.0
 offset_top = 52.0
@@ -1834,7 +1836,7 @@ theme_override_font_sizes/font_size = 35
 text = "70
 "
 
-[node name="circle" type="Node2D" parent="station70"]
+[node name="circle" type="Node2D" parent="Stations/station70"]
 position = Vector2(1265, 212)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1843,11 +1845,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station71" type="Node2D" parent="."]
+[node name="station71" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station71"]
+[node name="number" type="Label" parent="Stations/station71"]
 top_level = true
 offset_left = 1129.0
 offset_top = -45.0
@@ -1858,7 +1860,7 @@ theme_override_font_sizes/font_size = 35
 text = "71
 "
 
-[node name="circle" type="Node2D" parent="station71"]
+[node name="circle" type="Node2D" parent="Stations/station71"]
 position = Vector2(1507, 120)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1867,11 +1869,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station72" type="Node2D" parent="."]
+[node name="station72" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station72"]
+[node name="number" type="Label" parent="Stations/station72"]
 top_level = true
 offset_left = 929.0
 offset_top = -178.0
@@ -1882,7 +1884,7 @@ theme_override_font_sizes/font_size = 35
 text = "72
 "
 
-[node name="circle" type="Node2D" parent="station72"]
+[node name="circle" type="Node2D" parent="Stations/station72"]
 position = Vector2(1302, -14)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1891,11 +1893,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station73" type="Node2D" parent="."]
+[node name="station73" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station73"]
+[node name="number" type="Label" parent="Stations/station73"]
 top_level = true
 offset_left = 837.0
 offset_top = 574.0
@@ -1906,7 +1908,7 @@ theme_override_font_sizes/font_size = 35
 text = "73
 "
 
-[node name="circle" type="Node2D" parent="station73"]
+[node name="circle" type="Node2D" parent="Stations/station73"]
 position = Vector2(1215, 736)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1915,11 +1917,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station74" type="Node2D" parent="."]
+[node name="station74" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station74"]
+[node name="number" type="Label" parent="Stations/station74"]
 top_level = true
 offset_left = 658.0
 offset_top = 503.0
@@ -1930,7 +1932,7 @@ theme_override_font_sizes/font_size = 35
 text = "74
 "
 
-[node name="circle" type="Node2D" parent="station74"]
+[node name="circle" type="Node2D" parent="Stations/station74"]
 position = Vector2(1025, 667)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1939,11 +1941,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station75" type="Node2D" parent="."]
+[node name="station75" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station75"]
+[node name="number" type="Label" parent="Stations/station75"]
 top_level = true
 offset_left = 961.0
 offset_top = 448.0
@@ -1954,7 +1956,7 @@ theme_override_font_sizes/font_size = 35
 text = "75
 "
 
-[node name="circle" type="Node2D" parent="station75"]
+[node name="circle" type="Node2D" parent="Stations/station75"]
 position = Vector2(1337, 610)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1963,11 +1965,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station76" type="Node2D" parent="."]
+[node name="station76" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station76"]
+[node name="number" type="Label" parent="Stations/station76"]
 top_level = true
 offset_left = -165.0
 offset_top = 432.0
@@ -1978,7 +1980,7 @@ theme_override_font_sizes/font_size = 35
 text = "76
 "
 
-[node name="circle" type="Node2D" parent="station76"]
+[node name="circle" type="Node2D" parent="Stations/station76"]
 position = Vector2(210, 594)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -1987,11 +1989,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station77" type="Node2D" parent="."]
+[node name="station77" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station77"]
+[node name="number" type="Label" parent="Stations/station77"]
 top_level = true
 offset_left = -10.0
 offset_top = 546.0
@@ -2002,7 +2004,7 @@ theme_override_font_sizes/font_size = 35
 text = "77
 "
 
-[node name="circle" type="Node2D" parent="station77"]
+[node name="circle" type="Node2D" parent="Stations/station77"]
 position = Vector2(367, 708)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2011,11 +2013,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station78" type="Node2D" parent="."]
+[node name="station78" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station78"]
+[node name="number" type="Label" parent="Stations/station78"]
 top_level = true
 offset_left = 563.0
 offset_top = 81.0
@@ -2026,7 +2028,7 @@ theme_override_font_sizes/font_size = 35
 text = "78
 "
 
-[node name="circle" type="Node2D" parent="station78"]
+[node name="circle" type="Node2D" parent="Stations/station78"]
 position = Vector2(936, 243)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2035,11 +2037,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station79" type="Node2D" parent="."]
+[node name="station79" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station79"]
+[node name="number" type="Label" parent="Stations/station79"]
 top_level = true
 offset_left = 769.0
 offset_top = 456.0
@@ -2050,7 +2052,7 @@ theme_override_font_sizes/font_size = 35
 text = "79
 "
 
-[node name="circle" type="Node2D" parent="station79"]
+[node name="circle" type="Node2D" parent="Stations/station79"]
 position = Vector2(1139, 623)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2059,11 +2061,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station80" type="Node2D" parent="."]
+[node name="station80" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station80"]
+[node name="number" type="Label" parent="Stations/station80"]
 top_level = true
 offset_left = 1033.0
 offset_top = 263.0
@@ -2074,7 +2076,7 @@ theme_override_font_sizes/font_size = 35
 text = "80
 "
 
-[node name="circle" type="Node2D" parent="station80"]
+[node name="circle" type="Node2D" parent="Stations/station80"]
 position = Vector2(1408, 425)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2083,11 +2085,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station81" type="Node2D" parent="."]
+[node name="station81" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station81"]
+[node name="number" type="Label" parent="Stations/station81"]
 top_level = true
 offset_left = 682.0
 offset_top = 384.0
@@ -2098,7 +2100,7 @@ theme_override_font_sizes/font_size = 35
 text = "81
 "
 
-[node name="circle" type="Node2D" parent="station81"]
+[node name="circle" type="Node2D" parent="Stations/station81"]
 position = Vector2(1055, 549)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2107,11 +2109,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station82" type="Node2D" parent="."]
+[node name="station82" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station82"]
+[node name="number" type="Label" parent="Stations/station82"]
 top_level = true
 offset_left = 347.0
 offset_top = 603.0
@@ -2122,7 +2124,7 @@ theme_override_font_sizes/font_size = 35
 text = "82
 "
 
-[node name="circle" type="Node2D" parent="station82"]
+[node name="circle" type="Node2D" parent="Stations/station82"]
 position = Vector2(720, 768)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2131,11 +2133,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station83" type="Node2D" parent="."]
+[node name="station83" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station83"]
+[node name="number" type="Label" parent="Stations/station83"]
 top_level = true
 offset_left = 392.0
 offset_top = 57.0
@@ -2145,7 +2147,7 @@ theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.003519167
 theme_override_font_sizes/font_size = 35
 text = "83"
 
-[node name="circle" type="Node2D" parent="station83"]
+[node name="circle" type="Node2D" parent="Stations/station83"]
 position = Vector2(763, 220)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2154,11 +2156,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station84" type="Node2D" parent="."]
+[node name="station84" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station84"]
+[node name="number" type="Label" parent="Stations/station84"]
 top_level = true
 offset_left = 136.0
 offset_top = -43.0
@@ -2169,7 +2171,7 @@ theme_override_font_sizes/font_size = 35
 text = "84
 "
 
-[node name="circle" type="Node2D" parent="station84"]
+[node name="circle" type="Node2D" parent="Stations/station84"]
 position = Vector2(514, 119)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2178,11 +2180,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station85" type="Node2D" parent="."]
+[node name="station85" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station85"]
+[node name="number" type="Label" parent="Stations/station85"]
 top_level = true
 offset_left = 39.0
 offset_top = 17.0
@@ -2193,7 +2195,7 @@ theme_override_font_sizes/font_size = 35
 text = "85
 "
 
-[node name="circle" type="Node2D" parent="station85"]
+[node name="circle" type="Node2D" parent="Stations/station85"]
 position = Vector2(412, 183)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2202,11 +2204,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station86" type="Node2D" parent="."]
+[node name="station86" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station86"]
+[node name="number" type="Label" parent="Stations/station86"]
 top_level = true
 offset_left = 152.0
 offset_top = 128.0
@@ -2217,7 +2219,7 @@ theme_override_font_sizes/font_size = 35
 text = "86
 "
 
-[node name="circle" type="Node2D" parent="station86"]
+[node name="circle" type="Node2D" parent="Stations/station86"]
 position = Vector2(532, 293)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2226,11 +2228,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station87" type="Node2D" parent="."]
+[node name="station87" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station87"]
+[node name="number" type="Label" parent="Stations/station87"]
 top_level = true
 offset_left = 1004.0
 offset_top = 593.0
@@ -2241,7 +2243,7 @@ theme_override_font_sizes/font_size = 35
 text = "87
 "
 
-[node name="circle" type="Node2D" parent="station87"]
+[node name="circle" type="Node2D" parent="Stations/station87"]
 position = Vector2(1377, 758)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2250,11 +2252,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station88" type="Node2D" parent="."]
+[node name="station88" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station88"]
+[node name="number" type="Label" parent="Stations/station88"]
 top_level = true
 offset_left = 400.0
 offset_top = 481.0
@@ -2265,7 +2267,7 @@ theme_override_font_sizes/font_size = 35
 text = "88
 "
 
-[node name="circle" type="Node2D" parent="station88"]
+[node name="circle" type="Node2D" parent="Stations/station88"]
 position = Vector2(773, 639)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2274,11 +2276,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station89" type="Node2D" parent="."]
+[node name="station89" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station89"]
+[node name="number" type="Label" parent="Stations/station89"]
 top_level = true
 offset_left = 486.0
 offset_top = 524.0
@@ -2289,7 +2291,7 @@ theme_override_font_sizes/font_size = 35
 text = "89
 "
 
-[node name="circle" type="Node2D" parent="station89"]
+[node name="circle" type="Node2D" parent="Stations/station89"]
 position = Vector2(860, 692)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2298,11 +2300,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station90" type="Node2D" parent="."]
+[node name="station90" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station90"]
+[node name="number" type="Label" parent="Stations/station90"]
 top_level = true
 offset_left = 605.0
 offset_top = 664.0
@@ -2313,7 +2315,7 @@ theme_override_font_sizes/font_size = 35
 text = "90
 "
 
-[node name="circle" type="Node2D" parent="station90"]
+[node name="circle" type="Node2D" parent="Stations/station90"]
 position = Vector2(979, 826)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2322,11 +2324,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station91" type="Node2D" parent="."]
+[node name="station91" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station91"]
+[node name="number" type="Label" parent="Stations/station91"]
 top_level = true
 offset_left = 197.0
 offset_top = 548.0
@@ -2337,7 +2339,7 @@ theme_override_font_sizes/font_size = 35
 text = "91
 "
 
-[node name="circle" type="Node2D" parent="station91"]
+[node name="circle" type="Node2D" parent="Stations/station91"]
 position = Vector2(572, 713)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2346,11 +2348,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station92" type="Node2D" parent="."]
+[node name="station92" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station92"]
+[node name="number" type="Label" parent="Stations/station92"]
 top_level = true
 offset_left = 225.0
 offset_top = 658.0
@@ -2361,7 +2363,7 @@ theme_override_font_sizes/font_size = 35
 text = "92
 "
 
-[node name="circle" type="Node2D" parent="station92"]
+[node name="circle" type="Node2D" parent="Stations/station92"]
 position = Vector2(598, 820)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2370,11 +2372,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station93" type="Node2D" parent="."]
+[node name="station93" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station93"]
+[node name="number" type="Label" parent="Stations/station93"]
 top_level = true
 offset_left = -1192.0
 offset_top = 442.0
@@ -2385,7 +2387,7 @@ theme_override_font_sizes/font_size = 35
 text = "93
 "
 
-[node name="circle" type="Node2D" parent="station93"]
+[node name="circle" type="Node2D" parent="Stations/station93"]
 position = Vector2(-810, 606)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2394,11 +2396,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station94" type="Node2D" parent="."]
+[node name="station94" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station94"]
+[node name="number" type="Label" parent="Stations/station94"]
 top_level = true
 offset_left = -128.0
 offset_top = 626.0
@@ -2408,7 +2410,7 @@ theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.003519167
 theme_override_font_sizes/font_size = 35
 text = "94"
 
-[node name="circle" type="Node2D" parent="station94"]
+[node name="circle" type="Node2D" parent="Stations/station94"]
 position = Vector2(244, 789)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2417,11 +2419,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station95" type="Node2D" parent="."]
+[node name="station95" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station95"]
+[node name="number" type="Label" parent="Stations/station95"]
 top_level = true
 offset_left = -1075.0
 offset_top = 655.0
@@ -2432,7 +2434,7 @@ theme_override_font_sizes/font_size = 35
 text = "95
 "
 
-[node name="circle" type="Node2D" parent="station95"]
+[node name="circle" type="Node2D" parent="Stations/station95"]
 position = Vector2(-703, 817)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2441,11 +2443,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station96" type="Node2D" parent="."]
+[node name="station96" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station96"]
+[node name="number" type="Label" parent="Stations/station96"]
 top_level = true
 offset_left = -938.0
 offset_top = 508.0
@@ -2456,7 +2458,7 @@ theme_override_font_sizes/font_size = 35
 text = "96
 "
 
-[node name="circle" type="Node2D" parent="station96"]
+[node name="circle" type="Node2D" parent="Stations/station96"]
 position = Vector2(-566, 672)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2465,11 +2467,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station97" type="Node2D" parent="."]
+[node name="station97" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station97"]
+[node name="number" type="Label" parent="Stations/station97"]
 top_level = true
 offset_left = -271.0
 offset_top = 460.0
@@ -2480,7 +2482,7 @@ theme_override_font_sizes/font_size = 35
 text = "97
 "
 
-[node name="circle" type="Node2D" parent="station97"]
+[node name="circle" type="Node2D" parent="Stations/station97"]
 visible = false
 position = Vector2(105, 622)
 script = ExtResource("3_w4tea")
@@ -2490,11 +2492,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station98" type="Node2D" parent="."]
+[node name="station98" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station98"]
+[node name="number" type="Label" parent="Stations/station98"]
 top_level = true
 offset_left = -363.0
 offset_top = 681.0
@@ -2505,7 +2507,7 @@ theme_override_font_sizes/font_size = 35
 text = "98
 "
 
-[node name="circle" type="Node2D" parent="station98"]
+[node name="circle" type="Node2D" parent="Stations/station98"]
 position = Vector2(12, 841)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2514,11 +2516,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station99" type="Node2D" parent="."]
+[node name="station99" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station99"]
+[node name="number" type="Label" parent="Stations/station99"]
 top_level = true
 offset_left = -392.0
 offset_top = 479.0
@@ -2529,7 +2531,7 @@ theme_override_font_sizes/font_size = 35
 text = "99
 "
 
-[node name="circle" type="Node2D" parent="station99"]
+[node name="circle" type="Node2D" parent="Stations/station99"]
 position = Vector2(-17, 648)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2538,11 +2540,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station100" type="Node2D" parent="."]
+[node name="station100" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station100"]
+[node name="number" type="Label" parent="Stations/station100"]
 top_level = true
 offset_left = -308.0
 offset_top = 361.0
@@ -2553,7 +2555,7 @@ theme_override_font_sizes/font_size = 35
 text = "100
 "
 
-[node name="circle" type="Node2D" parent="station100"]
+[node name="circle" type="Node2D" parent="Stations/station100"]
 position = Vector2(79, 520)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2562,11 +2564,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station101" type="Node2D" parent="."]
+[node name="station101" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station101"]
+[node name="number" type="Label" parent="Stations/station101"]
 top_level = true
 offset_left = 9.0
 offset_top = 282.0
@@ -2577,7 +2579,7 @@ theme_override_font_sizes/font_size = 35
 text = "101
 "
 
-[node name="circle" type="Node2D" parent="station101"]
+[node name="circle" type="Node2D" parent="Stations/station101"]
 position = Vector2(395, 446)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2586,11 +2588,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station102" type="Node2D" parent="."]
+[node name="station102" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station102"]
+[node name="number" type="Label" parent="Stations/station102"]
 top_level = true
 offset_left = 207.0
 offset_top = 400.0
@@ -2601,7 +2603,7 @@ theme_override_font_sizes/font_size = 35
 text = "102
 "
 
-[node name="circle" type="Node2D" parent="station102"]
+[node name="circle" type="Node2D" parent="Stations/station102"]
 position = Vector2(592, 562)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2610,11 +2612,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station103" type="Node2D" parent="."]
+[node name="station103" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station103"]
+[node name="number" type="Label" parent="Stations/station103"]
 top_level = true
 offset_left = -1028.0
 offset_top = 346.0
@@ -2625,7 +2627,7 @@ theme_override_font_sizes/font_size = 35
 text = "103
 "
 
-[node name="circle" type="Node2D" parent="station103"]
+[node name="circle" type="Node2D" parent="Stations/station103"]
 position = Vector2(-648, 510)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2634,11 +2636,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station104" type="Node2D" parent="."]
+[node name="station104" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station104"]
+[node name="number" type="Label" parent="Stations/station104"]
 top_level = true
 offset_left = -843.0
 offset_top = -74.0
@@ -2649,7 +2651,7 @@ theme_override_font_sizes/font_size = 35
 text = "104
 "
 
-[node name="circle" type="Node2D" parent="station104"]
+[node name="circle" type="Node2D" parent="Stations/station104"]
 position = Vector2(-452, 90)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2658,11 +2660,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station105" type="Node2D" parent="."]
+[node name="station105" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station105"]
+[node name="number" type="Label" parent="Stations/station105"]
 top_level = true
 offset_left = -724.0
 offset_top = -152.0
@@ -2673,7 +2675,7 @@ theme_override_font_sizes/font_size = 35
 text = "105
 "
 
-[node name="circle" type="Node2D" parent="station105"]
+[node name="circle" type="Node2D" parent="Stations/station105"]
 position = Vector2(-334, 14)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2682,11 +2684,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station106" type="Node2D" parent="."]
+[node name="station106" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station106"]
+[node name="number" type="Label" parent="Stations/station106"]
 top_level = true
 offset_left = -941.0
 offset_top = 138.0
@@ -2697,7 +2699,7 @@ theme_override_font_sizes/font_size = 35
 text = "106
 "
 
-[node name="circle" type="Node2D" parent="station106"]
+[node name="circle" type="Node2D" parent="Stations/station106"]
 position = Vector2(-556, 301)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
@@ -2706,11 +2708,11 @@ fill_color = Color(0.029506557, 0.029506557, 0.029506557, 1)
 outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
-[node name="station107" type="Node2D" parent="."]
+[node name="station107" type="Node2D" parent="Stations"]
 position = Vector2(-355, -137)
 script = ExtResource("2_eobcy")
 
-[node name="number" type="Label" parent="station107"]
+[node name="number" type="Label" parent="Stations/station107"]
 top_level = true
 offset_left = -1168.0
 offset_top = 596.0
@@ -2721,7 +2723,7 @@ theme_override_font_sizes/font_size = 35
 text = "107
 "
 
-[node name="circle" type="Node2D" parent="station107"]
+[node name="circle" type="Node2D" parent="Stations/station107"]
 position = Vector2(-785, 752)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
