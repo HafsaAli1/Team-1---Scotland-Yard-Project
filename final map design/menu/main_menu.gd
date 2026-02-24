@@ -20,4 +20,4 @@ func _on_options_pressed() -> void:
 
 
 func _on_exit_pressed() -> void:
-	print("Exit pressed")
+	get_tree().change_scene_to_file("res://panel.tscn")
