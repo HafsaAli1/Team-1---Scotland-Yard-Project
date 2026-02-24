@@ -5,6 +5,7 @@ var players = [1, 2, 3, 4, 5]
 var starting_locations = {}
 var minimum_distance = 10
 var roles = {}
+var tickets = {"Taxi": 10, "Bus": 8, "Train": 4, "Black": 2}
 
 func _ready():
 	add_child(http_request)
@@ -37,13 +38,38 @@ func _on_request_completed(result, response_code, headers, body):
 		var json_data = JSON.parse_string(json_string)
 		
 		var locations = json_data["locations"]
+		var connections = json_data["connections"]
+		
+		var adjacency := {}
+		
+		for connection in connections:
+			var a = int(connection["locationA"])
+			var b = int(connection["locationB"])
+			
+			if not adjacency.has(a):
+				adjacency[a] = []
+			if not adjacency.has(b):
+				adjacency[b] = []
+			
+			adjacency[a].append(b)
+			adjacency[b].append(a)
+		
 		var random_locations = []
 		
-		while random_locations.size() < 5:
+		while random_locations.size() < players.size():
 			var index = randi() % locations.size()
-			var location_number = locations[index]["location"]
+			var location_number = int(locations[index]["location"])
 			
 			var valid = true
+			
+			if location_number in random_locations:
+				continue
+			
+			for existing in random_locations:
+				if adjacency.has(existing) and location_number in adjacency[existing]:
+					valid = false
+					break
+			
 			for existing in random_locations:
 				if abs(existing - location_number) < minimum_distance:
 					valid = false
