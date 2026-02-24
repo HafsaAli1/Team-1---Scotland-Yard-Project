@@ -2506,7 +2506,6 @@ text = "97
 "
 
 [node name="circle" type="Node2D" parent="Stations/station97"]
-visible = false
 position = Vector2(105, 622)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
