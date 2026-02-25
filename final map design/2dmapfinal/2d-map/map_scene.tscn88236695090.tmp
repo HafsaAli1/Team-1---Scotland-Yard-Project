@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d3e0ywxu82ktc"]
+[gd_scene load_steps=12 format=3 uid="uid://d3e0ywxu82ktc"]
 
 [ext_resource type="Texture2D" uid="uid://cyypgfjvqipv" path="res://Screenshot 2026-02-08 173952.png" id="1_iuamg"]
 [ext_resource type="Script" uid="uid://co5dxpo5enwdc" path="res://http.gd" id="1_khfxy"]
@@ -18,28 +18,6 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khfxy"]
-bg_color = Color(0.1764706, 0.15294118, 0.5019608, 0.7176471)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ld6lr"]
-bg_color = Color(0.012508532, 0, 0.305662, 1)
-expand_margin_top = 63.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yuqrp"]
-content_margin_left = 20.0
-content_margin_top = 20.0
-content_margin_right = 20.0
-bg_color = Color(0.22745098, 0.21176471, 0.44313726, 0.8)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0.09019608, 0.09019608, 0.6313726, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
 [node name="MapScene" type="Node2D"]
 script = ExtResource("1_khfxy")
 
@@ -51,7 +29,6 @@ texture = ExtResource("1_iuamg")
 script = ExtResource("3_yuqrp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(317, 138)
 scale = Vector2(1.9, 1.816)
 zoom = Vector2(0.365, 0.365)
 
@@ -2757,46 +2734,26 @@ outline_color = Color(0.76240367, 0.76240367, 0.76240367, 1)
 outline_width = 5.0
 
 [node name="Button" type="Button" parent="."]
-top_level = true
-offset_left = 1377.0
-offset_top = -707.0
-offset_right = 1771.0
-offset_bottom = -566.0
-theme_override_colors/font_color = Color(0.10374201, 0.1037442, 0.10374311, 1)
+offset_left = -1588.0
+offset_top = -203.0
+offset_right = -1194.0
+offset_bottom = -62.0
+theme_override_colors/font_color = Color(0.00026772422, 0.00026772422, 0.00026772422, 1)
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_w4tea")
-text = "Players
-"
+text = "Tickets"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-scale = Vector2(0.5, 0.5)
-transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
 
-[node name="Current player" type="PanelContainer" parent="CanvasLayer"]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 40.0
-offset_top = 490.0
-offset_right = 932.0
-offset_bottom = 630.0
-grow_vertical = 0
-scale = Vector2(1, 0.92)
-
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Current player"]
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_styles/panel = SubResource("StyleBoxFlat_khfxy")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Current player/PanelContainer"]
-layout_mode = 2
-
-[node name="TaxiTicket" type="ColorRect" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer"]
+[node name="TaxiTicket" type="ColorRect" parent="CanvasLayer"]
 custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
+offset_left = -1518.0
+offset_top = -22.0
+offset_right = -1298.0
+offset_bottom = 118.0
 color = Color(0.7659287, 0.7214493, 0.13435903, 1)
 
-[node name="TaxiIcon" type="TextureRect" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer/TaxiTicket"]
+[node name="TaxiIcon" type="TextureRect" parent="CanvasLayer/TaxiTicket"]
 layout_mode = 0
 offset_left = 22.0
 offset_top = 38.0
@@ -2805,7 +2762,7 @@ offset_bottom = 97.0
 texture = ExtResource("5_860hk")
 expand_mode = 1
 
-[node name="TaxiCount" type="Label" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer/TaxiTicket"]
+[node name="TaxiCount" type="Label" parent="CanvasLayer/TaxiTicket"]
 layout_mode = 0
 offset_left = 112.0
 offset_top = 30.0
@@ -2815,60 +2772,15 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "x10"
 
-[node name="UndergroundTicket" type="ColorRect" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer"]
+[node name="BusTicket" type="ColorRect" parent="CanvasLayer"]
 custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
-color = Color(0.89411765, 0.16470589, 0.19215687, 1)
-
-[node name="UndergroundIcon" type="TextureRect" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer/UndergroundTicket"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 32.0
-offset_right = 90.0
-offset_bottom = 101.0
-texture = ExtResource("7_yuqrp")
-expand_mode = 1
-
-[node name="UndergroundCount" type="Label" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer/UndergroundTicket"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 30.0
-offset_right = 197.0
-offset_bottom = 99.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-text = "x4"
-
-[node name="MrXTicket" type="ColorRect" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer"]
-custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
-color = Color(0, 0, 0, 1)
-
-[node name="MrXIcon" type="TextureRect" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer/MrXTicket"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 32.0
-offset_right = 90.0
-offset_bottom = 101.0
-texture = ExtResource("8_ld6lr")
-expand_mode = 1
-
-[node name="MrXCount" type="Label" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer/MrXTicket"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 30.0
-offset_right = 197.0
-offset_bottom = 99.0
-theme_override_colors/font_color = Color(0.96035105, 0.96035105, 0.96035093, 1)
-theme_override_font_sizes/font_size = 50
-text = "2x"
-
-[node name="BusTicket" type="ColorRect" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer"]
-custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
+offset_left = -1512.0
+offset_top = 189.0
+offset_right = -1292.0
+offset_bottom = 329.0
 color = Color(0.18543601, 0.44171184, 0.7245011, 1)
 
-[node name="BusIcon" type="TextureRect" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer/BusTicket"]
+[node name="BusIcon" type="TextureRect" parent="CanvasLayer/BusTicket"]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 32.0
@@ -2877,7 +2789,7 @@ offset_bottom = 101.0
 texture = ExtResource("6_khfxy")
 expand_mode = 1
 
-[node name="BusCount" type="Label" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer/BusTicket"]
+[node name="BusCount" type="Label" parent="CanvasLayer/BusTicket"]
 layout_mode = 0
 offset_left = 112.0
 offset_top = 30.0
@@ -2887,60 +2799,15 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "x8"
 
-[node name="OtherPlayer1" type="PanelContainer" parent="CanvasLayer"]
-top_level = true
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 682.0
-offset_top = 68.0
-offset_right = 1614.0
-offset_bottom = -410.0
-grow_horizontal = 0
-grow_vertical = 2
-scale = Vector2(0.5, 0.871)
-theme_override_styles/panel = SubResource("StyleBoxFlat_ld6lr")
-
-[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer/OtherPlayer1"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-theme_override_styles/panel = SubResource("StyleBoxFlat_yuqrp")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/OtherPlayer1/PanelContainer2"]
-layout_mode = 2
-
-[node name="TaxiTicket" type="ColorRect" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer"]
+[node name="UndergroundTicket" type="ColorRect" parent="CanvasLayer"]
 custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
-color = Color(0.7659287, 0.7214493, 0.13435903, 1)
-
-[node name="TaxiIcon" type="TextureRect" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer/TaxiTicket"]
-layout_mode = 0
-offset_left = 22.0
-offset_top = 38.0
-offset_right = 86.0
-offset_bottom = 97.0
-texture = ExtResource("5_860hk")
-expand_mode = 1
-
-[node name="TaxiCount" type="Label" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer/TaxiTicket"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 30.0
-offset_right = 197.0
-offset_bottom = 99.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-text = "x10"
-
-[node name="UndergroundTicket" type="ColorRect" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer"]
-custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
+offset_left = -1512.0
+offset_top = 392.0
+offset_right = -1292.0
+offset_bottom = 532.0
 color = Color(0.89411765, 0.16470589, 0.19215687, 1)
 
-[node name="UndergroundIcon" type="TextureRect" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer/UndergroundTicket"]
+[node name="UndergroundIcon" type="TextureRect" parent="CanvasLayer/UndergroundTicket"]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 32.0
@@ -2949,7 +2816,7 @@ offset_bottom = 101.0
 texture = ExtResource("7_yuqrp")
 expand_mode = 1
 
-[node name="UndergroundCount" type="Label" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer/UndergroundTicket"]
+[node name="UndergroundCount" type="Label" parent="CanvasLayer/UndergroundTicket"]
 layout_mode = 0
 offset_left = 112.0
 offset_top = 30.0
@@ -2959,12 +2826,15 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "x4"
 
-[node name="MrXTicket" type="ColorRect" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer"]
+[node name="MrXTicket" type="ColorRect" parent="CanvasLayer"]
 custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
+offset_left = -1516.0
+offset_top = 575.0
+offset_right = -1296.0
+offset_bottom = 715.0
 color = Color(0, 0, 0, 1)
 
-[node name="MrXIcon" type="TextureRect" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer/MrXTicket"]
+[node name="MrXIcon" type="TextureRect" parent="CanvasLayer/MrXTicket"]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 32.0
@@ -2973,7 +2843,7 @@ offset_bottom = 101.0
 texture = ExtResource("8_ld6lr")
 expand_mode = 1
 
-[node name="MrXCount" type="Label" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer/MrXTicket"]
+[node name="MrXCount" type="Label" parent="CanvasLayer/MrXTicket"]
 layout_mode = 0
 offset_left = 112.0
 offset_top = 30.0
@@ -2982,270 +2852,6 @@ offset_bottom = 99.0
 theme_override_colors/font_color = Color(0.96035105, 0.96035105, 0.96035093, 1)
 theme_override_font_sizes/font_size = 50
 text = "2x"
-
-[node name="BusTicket" type="ColorRect" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer"]
-custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
-color = Color(0.18543601, 0.44171184, 0.7245011, 1)
-
-[node name="BusIcon" type="TextureRect" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer/BusTicket"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 32.0
-offset_right = 90.0
-offset_bottom = 101.0
-texture = ExtResource("6_khfxy")
-expand_mode = 1
-
-[node name="BusCount" type="Label" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer/BusTicket"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 30.0
-offset_right = 197.0
-offset_bottom = 99.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-text = "x8"
-
-[node name="OtherPlayer2" type="PanelContainer" parent="CanvasLayer"]
-top_level = true
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 684.0
-offset_top = 292.0
-offset_right = 1616.0
-offset_bottom = -186.0
-grow_horizontal = 0
-grow_vertical = 2
-scale = Vector2(0.5, 0.871)
-theme_override_styles/panel = SubResource("StyleBoxFlat_ld6lr")
-
-[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer/OtherPlayer2"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-theme_override_styles/panel = SubResource("StyleBoxFlat_yuqrp")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/OtherPlayer2/PanelContainer2"]
-layout_mode = 2
-
-[node name="TaxiTicket" type="ColorRect" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer"]
-custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
-color = Color(0.7659287, 0.7214493, 0.13435903, 1)
-
-[node name="TaxiIcon" type="TextureRect" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer/TaxiTicket"]
-layout_mode = 0
-offset_left = 22.0
-offset_top = 38.0
-offset_right = 86.0
-offset_bottom = 97.0
-texture = ExtResource("5_860hk")
-expand_mode = 1
-
-[node name="TaxiCount" type="Label" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer/TaxiTicket"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 30.0
-offset_right = 197.0
-offset_bottom = 99.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-text = "x10"
-
-[node name="UndergroundTicket" type="ColorRect" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer"]
-custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
-color = Color(0.89411765, 0.16470589, 0.19215687, 1)
-
-[node name="UndergroundIcon" type="TextureRect" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer/UndergroundTicket"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 32.0
-offset_right = 90.0
-offset_bottom = 101.0
-texture = ExtResource("7_yuqrp")
-expand_mode = 1
-
-[node name="UndergroundCount" type="Label" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer/UndergroundTicket"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 30.0
-offset_right = 197.0
-offset_bottom = 99.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-text = "x4"
-
-[node name="MrXTicket" type="ColorRect" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer"]
-custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
-color = Color(0, 0, 0, 1)
-
-[node name="MrXIcon" type="TextureRect" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer/MrXTicket"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 32.0
-offset_right = 90.0
-offset_bottom = 101.0
-texture = ExtResource("8_ld6lr")
-expand_mode = 1
-
-[node name="MrXCount" type="Label" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer/MrXTicket"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 30.0
-offset_right = 197.0
-offset_bottom = 99.0
-theme_override_colors/font_color = Color(0.96035105, 0.96035105, 0.96035093, 1)
-theme_override_font_sizes/font_size = 50
-text = "2x"
-
-[node name="BusTicket" type="ColorRect" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer"]
-custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
-color = Color(0.18543601, 0.44171184, 0.7245011, 1)
-
-[node name="BusIcon" type="TextureRect" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer/BusTicket"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 32.0
-offset_right = 90.0
-offset_bottom = 101.0
-texture = ExtResource("6_khfxy")
-expand_mode = 1
-
-[node name="BusCount" type="Label" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer/BusTicket"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 30.0
-offset_right = 197.0
-offset_bottom = 99.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-text = "x8"
-
-[node name="OtherPlayer3" type="PanelContainer" parent="CanvasLayer"]
-top_level = true
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 684.0
-offset_top = 509.99997
-offset_right = 1616.0
-offset_bottom = 32.0
-grow_horizontal = 0
-grow_vertical = 2
-scale = Vector2(0.5, 0.871)
-theme_override_styles/panel = SubResource("StyleBoxFlat_ld6lr")
-
-[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer/OtherPlayer3"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-theme_override_styles/panel = SubResource("StyleBoxFlat_yuqrp")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/OtherPlayer3/PanelContainer2"]
-layout_mode = 2
-
-[node name="TaxiTicket" type="ColorRect" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer"]
-custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
-color = Color(0.7659287, 0.7214493, 0.13435903, 1)
-
-[node name="TaxiIcon" type="TextureRect" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer/TaxiTicket"]
-layout_mode = 0
-offset_left = 22.0
-offset_top = 38.0
-offset_right = 86.0
-offset_bottom = 97.0
-texture = ExtResource("5_860hk")
-expand_mode = 1
-
-[node name="TaxiCount" type="Label" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer/TaxiTicket"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 30.0
-offset_right = 197.0
-offset_bottom = 99.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-text = "x10"
-
-[node name="UndergroundTicket" type="ColorRect" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer"]
-custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
-color = Color(0.89411765, 0.16470589, 0.19215687, 1)
-
-[node name="UndergroundIcon" type="TextureRect" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer/UndergroundTicket"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 32.0
-offset_right = 90.0
-offset_bottom = 101.0
-texture = ExtResource("7_yuqrp")
-expand_mode = 1
-
-[node name="UndergroundCount" type="Label" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer/UndergroundTicket"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 30.0
-offset_right = 197.0
-offset_bottom = 99.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-text = "x4"
-
-[node name="MrXTicket" type="ColorRect" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer"]
-custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
-color = Color(0, 0, 0, 1)
-
-[node name="MrXIcon" type="TextureRect" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer/MrXTicket"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 32.0
-offset_right = 90.0
-offset_bottom = 101.0
-texture = ExtResource("8_ld6lr")
-expand_mode = 1
-
-[node name="MrXCount" type="Label" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer/MrXTicket"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 30.0
-offset_right = 197.0
-offset_bottom = 99.0
-theme_override_colors/font_color = Color(0.96035105, 0.96035105, 0.96035093, 1)
-theme_override_font_sizes/font_size = 50
-text = "2x"
-
-[node name="BusTicket" type="ColorRect" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer"]
-custom_minimum_size = Vector2(220, 140)
-layout_mode = 2
-color = Color(0.18543601, 0.44171184, 0.7245011, 1)
-
-[node name="BusIcon" type="TextureRect" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer/BusTicket"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 32.0
-offset_right = 90.0
-offset_bottom = 101.0
-texture = ExtResource("6_khfxy")
-expand_mode = 1
-
-[node name="BusCount" type="Label" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer/BusTicket"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 30.0
-offset_right = 197.0
-offset_bottom = 99.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-text = "x8"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
