@@ -41,6 +41,10 @@ var players:Array = []
 var current_player:int = 0
 var board:Dictionary = {}
 
+func add_player(player_id:int, player_role:int, player_position:int, tickets:Dictionary):
+	var p = Player.new(player_id, player_role, player_position, tickets)
+	players.append(p)
+
 # initiating round / turn variables
 var turn = 1
 var round = 1
