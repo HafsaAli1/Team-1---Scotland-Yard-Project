@@ -13,7 +13,7 @@ func _ready():
 		print("Request Maps Error: ", error)
 
 func _on_request_completed(result, response_code, headers, body):
-	# Safety Check: If we changed scenes, stop here
+	
 	if not is_inside_tree(): 
 		return
 
@@ -22,7 +22,7 @@ func _on_request_completed(result, response_code, headers, body):
 		var json_data = JSON.parse_string(json_string)
 		
 		if typeof(json_data) == TYPE_DICTIONARY:
-			var games = json_data.get("games", []) # Safer way to get data
+			var games = json_data.get("games", []) 
 			var gameIdArray = []
 			
 			for i in games:
@@ -31,7 +31,7 @@ func _on_request_completed(result, response_code, headers, body):
 			if gameIdArray.size() > 0:
 				var gameSelect = gameIdArray.pick_random()
 				
-				# Check if Label3 exists before assigning
+				
 				if has_node("Label3"):
 					$Label3.text = str(gameSelect)
 				else:

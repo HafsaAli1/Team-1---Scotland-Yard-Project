@@ -1,14 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://d3e0ywxu82ktc"]
+[gd_scene load_steps=11 format=3 uid="uid://cmbt1cj4bmfds"]
 
-[ext_resource type="Texture2D" uid="uid://cyypgfjvqipv" path="res://Screenshot 2026-02-08 173952.png" id="1_iuamg"]
-[ext_resource type="Script" uid="uid://co5dxpo5enwdc" path="res://http.gd" id="1_khfxy"]
-[ext_resource type="Script" uid="uid://csa41qrsv8k5s" path="res://station_1.gd" id="2_eobcy"]
-[ext_resource type="Texture2D" uid="uid://c3iwolog4nawj" path="res://xRoutes_00000.png" id="2_w4tea"]
-[ext_resource type="Script" uid="uid://bymxhy2k2iwfg" path="res://circle.gd" id="3_w4tea"]
-[ext_resource type="Texture2D" uid="uid://ch8mfb2mbl7p4" path="res://frontal-taxi-cab.png" id="5_860hk"]
-[ext_resource type="Texture2D" uid="uid://dlbuwrtrtpnlj" path="res://bus.png" id="6_khfxy"]
-[ext_resource type="Texture2D" uid="uid://nd6nxqiu7pm" path="res://london-metro-logo.png" id="7_yuqrp"]
-[ext_resource type="Texture2D" uid="uid://cdqo4tfmgyic6" path="res://detective.png" id="8_ld6lr"]
+[ext_resource type="Texture2D" uid="uid://c75u6usubnnoo" path="res://Screenshot 2026-02-08 173952.png" id="1_iuamg"]
+[ext_resource type="Script" uid="uid://d3v58dip1124a" path="res://http.gd" id="1_khfxy"]
+[ext_resource type="Script" path="res://station_1.gd" id="2_eobcy"]
+[ext_resource type="Script" path="res://circle.gd" id="3_w4tea"]
+[ext_resource type="Texture2D" uid="uid://c2yj668i6n8ax" path="res://ButtonNormal_00000.png" id="5_mch5g"]
+[ext_resource type="Texture2D" uid="uid://c0gxn51f7iatu" path="res://ButtonPressed_00000.png" id="6_ehmvt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4tea"]
 bg_color = Color(0.9838529, 0.97250265, 0.9521381, 1)
@@ -142,7 +139,6 @@ metadata/_edit_lock_ = true
 [node name="XRoutes00000" type="Sprite2D" parent="Routes"]
 position = Vector2(4, -7)
 scale = Vector2(2.4, 2.4)
-texture = ExtResource("2_w4tea")
 
 [node name="Stations" type="Node2D" parent="."]
 
@@ -1131,10 +1127,10 @@ script = ExtResource("2_eobcy")
 
 [node name="number" type="Label" parent="Stations/station40"]
 top_level = true
-offset_left = -755.0
-offset_top = -528.0
-offset_right = -715.0
-offset_bottom = -375.0
+offset_left = -752.0
+offset_top = -530.0
+offset_right = -712.0
+offset_bottom = -377.0
 theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
 theme_override_font_sizes/font_size = 35
 text = "40
@@ -2771,6 +2767,7 @@ scale = Vector2(0.5, 0.5)
 transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
 
 [node name="Current player" type="PanelContainer" parent="CanvasLayer"]
+visible = false
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -2800,7 +2797,6 @@ offset_left = 22.0
 offset_top = 38.0
 offset_right = 86.0
 offset_bottom = 97.0
-texture = ExtResource("5_860hk")
 expand_mode = 1
 
 [node name="TaxiCount" type="Label" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer/TaxiTicket"]
@@ -2824,7 +2820,6 @@ offset_left = 18.0
 offset_top = 32.0
 offset_right = 90.0
 offset_bottom = 101.0
-texture = ExtResource("7_yuqrp")
 expand_mode = 1
 
 [node name="UndergroundCount" type="Label" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer/UndergroundTicket"]
@@ -2848,7 +2843,6 @@ offset_left = 18.0
 offset_top = 32.0
 offset_right = 90.0
 offset_bottom = 101.0
-texture = ExtResource("8_ld6lr")
 expand_mode = 1
 
 [node name="MrXCount" type="Label" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer/MrXTicket"]
@@ -2872,7 +2866,6 @@ offset_left = 18.0
 offset_top = 32.0
 offset_right = 90.0
 offset_bottom = 101.0
-texture = ExtResource("6_khfxy")
 expand_mode = 1
 
 [node name="BusCount" type="Label" parent="CanvasLayer/Current player/PanelContainer/HBoxContainer/BusTicket"]
@@ -2886,6 +2879,7 @@ theme_override_font_sizes/font_size = 50
 text = "x8"
 
 [node name="OtherPlayer1" type="PanelContainer" parent="CanvasLayer"]
+visible = false
 top_level = true
 anchors_preset = 11
 anchor_left = 1.0
@@ -2920,7 +2914,6 @@ offset_left = 22.0
 offset_top = 38.0
 offset_right = 86.0
 offset_bottom = 97.0
-texture = ExtResource("5_860hk")
 expand_mode = 1
 
 [node name="TaxiCount" type="Label" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer/TaxiTicket"]
@@ -2944,7 +2937,6 @@ offset_left = 18.0
 offset_top = 32.0
 offset_right = 90.0
 offset_bottom = 101.0
-texture = ExtResource("7_yuqrp")
 expand_mode = 1
 
 [node name="UndergroundCount" type="Label" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer/UndergroundTicket"]
@@ -2968,7 +2960,6 @@ offset_left = 18.0
 offset_top = 32.0
 offset_right = 90.0
 offset_bottom = 101.0
-texture = ExtResource("8_ld6lr")
 expand_mode = 1
 
 [node name="MrXCount" type="Label" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer/MrXTicket"]
@@ -2992,7 +2983,6 @@ offset_left = 18.0
 offset_top = 32.0
 offset_right = 90.0
 offset_bottom = 101.0
-texture = ExtResource("6_khfxy")
 expand_mode = 1
 
 [node name="BusCount" type="Label" parent="CanvasLayer/OtherPlayer1/PanelContainer2/HBoxContainer/BusTicket"]
@@ -3006,6 +2996,7 @@ theme_override_font_sizes/font_size = 50
 text = "x8"
 
 [node name="OtherPlayer2" type="PanelContainer" parent="CanvasLayer"]
+visible = false
 top_level = true
 anchors_preset = 11
 anchor_left = 1.0
@@ -3040,7 +3031,6 @@ offset_left = 22.0
 offset_top = 38.0
 offset_right = 86.0
 offset_bottom = 97.0
-texture = ExtResource("5_860hk")
 expand_mode = 1
 
 [node name="TaxiCount" type="Label" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer/TaxiTicket"]
@@ -3064,7 +3054,6 @@ offset_left = 18.0
 offset_top = 32.0
 offset_right = 90.0
 offset_bottom = 101.0
-texture = ExtResource("7_yuqrp")
 expand_mode = 1
 
 [node name="UndergroundCount" type="Label" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer/UndergroundTicket"]
@@ -3088,7 +3077,6 @@ offset_left = 18.0
 offset_top = 32.0
 offset_right = 90.0
 offset_bottom = 101.0
-texture = ExtResource("8_ld6lr")
 expand_mode = 1
 
 [node name="MrXCount" type="Label" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer/MrXTicket"]
@@ -3112,7 +3100,6 @@ offset_left = 18.0
 offset_top = 32.0
 offset_right = 90.0
 offset_bottom = 101.0
-texture = ExtResource("6_khfxy")
 expand_mode = 1
 
 [node name="BusCount" type="Label" parent="CanvasLayer/OtherPlayer2/PanelContainer2/HBoxContainer/BusTicket"]
@@ -3126,6 +3113,7 @@ theme_override_font_sizes/font_size = 50
 text = "x8"
 
 [node name="OtherPlayer3" type="PanelContainer" parent="CanvasLayer"]
+visible = false
 top_level = true
 anchors_preset = 11
 anchor_left = 1.0
@@ -3160,7 +3148,6 @@ offset_left = 22.0
 offset_top = 38.0
 offset_right = 86.0
 offset_bottom = 97.0
-texture = ExtResource("5_860hk")
 expand_mode = 1
 
 [node name="TaxiCount" type="Label" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer/TaxiTicket"]
@@ -3184,7 +3171,6 @@ offset_left = 18.0
 offset_top = 32.0
 offset_right = 90.0
 offset_bottom = 101.0
-texture = ExtResource("7_yuqrp")
 expand_mode = 1
 
 [node name="UndergroundCount" type="Label" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer/UndergroundTicket"]
@@ -3208,7 +3194,6 @@ offset_left = 18.0
 offset_top = 32.0
 offset_right = 90.0
 offset_bottom = 101.0
-texture = ExtResource("8_ld6lr")
 expand_mode = 1
 
 [node name="MrXCount" type="Label" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer/MrXTicket"]
@@ -3232,7 +3217,6 @@ offset_left = 18.0
 offset_top = 32.0
 offset_right = 90.0
 offset_bottom = 101.0
-texture = ExtResource("6_khfxy")
 expand_mode = 1
 
 [node name="BusCount" type="Label" parent="CanvasLayer/OtherPlayer3/PanelContainer2/HBoxContainer/BusTicket"]
@@ -3250,9 +3234,454 @@ text = "x8"
 [node name="ButtonsTouch" type="CanvasLayer" parent="."]
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="ButtonsTouch"]
+position = Vector2(-3, -35)
 script = ExtResource("3_w4tea")
 radius_x = 40.0
 radius_y = 25.0
 fill_color = Color(0, 0, 0, 1)
 outline_color = Color(1, 1, 1, 0.4627451)
 outline_width = 5.0
+
+[node name="TouchScreenButtons" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="TouchScreenButton1" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-144, 229.99998)
+scale = Vector2(0.8203125, 0.78125)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-57, 149)
+scale = Vector2(0.8125, 0.84375)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(261, 107)
+scale = Vector2(0.8203124, 0.96875)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(235, -78)
+scale = Vector2(0.8046875, 0.828125)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(474, -98)
+scale = Vector2(0.78125, 0.9453125)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-210, -100)
+scale = Vector2(0.8046875, 0.8828125)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-353, -189)
+scale = Vector2(0.8203125, 0.953125)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton8" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-218, -286)
+scale = Vector2(0.734375, 0.890625)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton9" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-42, -310)
+scale = Vector2(0.84375, 0.90625)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton10" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(24, -402)
+scale = Vector2(0.7890625, 0.8203125)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton11" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(326, -376)
+scale = Vector2(0.7890625, 0.9140625)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton12" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(319, -269)
+scale = Vector2(0.78125, 0.9453125)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton13" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(614, -254)
+scale = Vector2(0.7421875, 0.9140626)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton14" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(721, -190.00002)
+scale = Vector2(0.7734375, 0.89062506)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton15" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(610, -100)
+scale = Vector2(0.7656249, 0.7734375)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton16" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(695, -62.000004)
+scale = Vector2(0.76562506, 0.9296875)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton17" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(764, 56)
+scale = Vector2(0.7890625, 0.9140625)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton18" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(759.00006, 156)
+scale = Vector2(0.7421872, 0.89843744)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton19" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(580, 198)
+scale = Vector2(0.796875, 0.875)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton20" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(485, 244)
+scale = Vector2(0.7578125, 0.890625)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton21" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(439, 333)
+scale = Vector2(0.7734376, 0.9296875)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton22" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(269, 340)
+scale = Vector2(0.7265625, 0.9765625)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton23" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(150, 234)
+scale = Vector2(0.75, 0.953125)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton24" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-257, 154.00002)
+scale = Vector2(0.7968751, 0.9296875)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton25" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-357, -27)
+scale = Vector2(0.7265625, 1.0078125)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton26" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-511, -127)
+scale = Vector2(0.78124994, 0.90625006)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton27" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-507, 56)
+scale = Vector2(0.734375, 0.9921875)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton28" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-720, 186)
+scale = Vector2(0.75, 0.921875)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton29" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-877, 354)
+scale = Vector2(0.75, 0.8671875)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton30" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-872, 199)
+scale = Vector2(0.78125, 0.9140625)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton31" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-725, 48)
+scale = Vector2(0.7890627, 0.859375)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton32" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-690, -249)
+scale = Vector2(0.71875, 0.8515625)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton33" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-679, -350)
+scale = Vector2(0.7109375, 0.8984375)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton34" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-829, -240)
+scale = Vector2(0.7265625, 0.8671875)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton35" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-1106, -143)
+scale = Vector2(0.8203125, 0.9296875)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton36" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-989, -5)
+scale = Vector2(0.796875, 0.8828125)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton37" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-1177, -539)
+scale = Vector2(0.74999994, 0.89843726)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton38" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-1088, -593.99994)
+scale = Vector2(0.7343754, 0.9062497)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton39" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-913, -538)
+scale = Vector2(0.75, 0.9140624)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton40" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-781, -563)
+scale = Vector2(0.75, 0.890625)
+texture_normal = ExtResource("5_mch5g")
+texture_pressed = ExtResource("6_ehmvt")
+
+[node name="TouchScreenButton41" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-591, -427)
+
+[node name="TouchScreenButton42" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-502, -682)
+
+[node name="TouchScreenButton43" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-339, -667)
+
+[node name="TouchScreenButton44" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-203, -595)
+
+[node name="TouchScreenButton45" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-197, -359)
+
+[node name="TouchScreenButton46" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-357, -368)
+
+[node name="TouchScreenButton47" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-549, -232)
+
+[node name="TouchScreenButton48" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-408, -241)
+
+[node name="TouchScreenButton49" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(304, -484)
+
+[node name="TouchScreenButton50" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(152, -685)
+
+[node name="TouchScreenButton51" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(172, -521)
+
+[node name="TouchScreenButton52" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(583, -462)
+
+[node name="TouchScreenButton53" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(678, -395)
+
+[node name="TouchScreenButton54" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(838, -360)
+
+[node name="TouchScreenButton55" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(311, -410)
+
+[node name="TouchScreenButton56" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(428, -496)
+
+[node name="TouchScreenButton57" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(696, -645)
+
+[node name="TouchScreenButton58" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(778, -677)
+
+[node name="TouchScreenButton59" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(869, -453)
+
+[node name="TouchScreenButton60" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(1092, -435)
+
+[node name="TouchScreenButton61" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(896, -593)
+
+[node name="TouchScreenButton62" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(574, -351)
+
+[node name="TouchScreenButton63" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(1157, -528)
+
+[node name="TouchScreenButton64" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(1093, -191)
+
+[node name="TouchScreenButton65" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(1203, -330)
+
+[node name="TouchScreenButton66" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(1102, -327)
+
+[node name="TouchScreenButton67" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(910, -264)
+
+[node name="TouchScreenButton68" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(919, 325)
+
+[node name="TouchScreenButton69" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(546, -122)
+
+[node name="TouchScreenButton70" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(900, 84)
+
+[node name="TouchScreenButton71" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(1152, -7)
+
+[node name="TouchScreenButton72" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(937, -148)
+
+[node name="TouchScreenButton73" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(854, 606)
+
+[node name="TouchScreenButton74" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(675, 530)
+
+[node name="TouchScreenButton75" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(981, 480)
+
+[node name="TouchScreenButton76" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-149, 461)
+
+[node name="TouchScreenButton77" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(5, 571)
+
+[node name="TouchScreenButton78" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(575, 110)
+
+[node name="TouchScreenButton79" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(771, 491)
+
+[node name="TouchScreenButton80" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(1042, 298)
+
+[node name="TouchScreenButton81" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(695, 417)
+
+[node name="TouchScreenButton82" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(361, 640)
+
+[node name="TouchScreenButton83" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(408, 90)
+
+[node name="TouchScreenButton84" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(149, -14)
+
+[node name="TouchScreenButton85" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(47, 53)
+
+[node name="TouchScreenButton86" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(176, 164)
+
+[node name="TouchScreenButton87" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(1021, 628)
+
+[node name="TouchScreenButton88" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(422, 509)
+
+[node name="TouchScreenButton89" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(503, 554)
+
+[node name="TouchScreenButton90" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(625, 702)
+
+[node name="TouchScreenButton91" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(205, 582)
+
+[node name="TouchScreenButton92" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(247, 695)
+
+[node name="TouchScreenButton93" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-1175, 481)
+
+[node name="TouchScreenButton94" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-121, 658)
+
+[node name="TouchScreenButton95" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-1068, 686)
+
+[node name="TouchScreenButton96" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-925, 541)
+
+[node name="TouchScreenButton97" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-250, 494)
+
+[node name="TouchScreenButton98" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-339, 708)
+
+[node name="TouchScreenButton99" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-381, 519)
+
+[node name="TouchScreenButton100" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-281, 390)
+
+[node name="TouchScreenButton101" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(31, 323)
+
+[node name="TouchScreenButton102" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(237, 433)
+
+[node name="TouchScreenButton103" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-1005, 377)
+
+[node name="TouchScreenButton104" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-804, -42)
+
+[node name="TouchScreenButton105" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-691, -118)
+
+[node name="TouchScreenButton106" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-911, 170)
+
+[node name="TouchScreenButton107" type="TouchScreenButton" parent="TouchScreenButtons"]
+position = Vector2(-1138, 621)
