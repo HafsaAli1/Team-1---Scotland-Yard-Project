@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckj78iyt0lmp1"]
+[gd_scene load_steps=7 format=3 uid="uid://ckj78iyt0lmp1"]
 
-[ext_resource type="Texture2D" uid="uid://b0el2kbrdb8i" path="res://Leeds Map.webp" id="1_s25x5"]
+[ext_resource type="Script" uid="uid://d3v58dip1124a" path="res://HTTP.gd" id="1_n5lge"]
+[ext_resource type="Texture2D" uid="uid://c15ilv38wvn5l" path="res://Leeds Map.webp" id="1_s25x5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n5lge"]
 texture = ExtResource("1_s25x5")
@@ -26,6 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_n5lge")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -108,3 +110,10 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxFlat_n5lge")
 text = "START"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 549.0
+offset_top = 118.0
+offset_right = 589.0
+offset_bottom = 141.0

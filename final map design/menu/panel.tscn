@@ -1,0 +1,139 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgw8k40toe4qu"]
+
+[ext_resource type="Texture2D" uid="uid://c15ilv38wvn5l" path="res://Leeds Map.webp" id="1_ikblc"]
+[ext_resource type="FontFile" uid="uid://d3jvs2hylrotb" path="res://GrapeSoda.ttf" id="2_5b1ud"]
+[ext_resource type="Script" uid="uid://baw21plvcfxey" path="res://ButtonScript.gd" id="3_5b1ud"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mn0ys"]
+texture = ExtResource("1_ikblc")
+modulate_color = Color(0.44291046, 0.44291085, 0.44291073, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikblc"]
+bg_color = Color(11.708403, 11.708403, 11.708403, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Panel" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mn0ys")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.0
+offset_top = -195.0
+offset_right = 163.0
+offset_bottom = -136.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_fonts/font = ExtResource("2_5b1ud")
+theme_override_font_sizes/font_size = 85
+text = "HOW TO PLAY:"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+offset_left = 329.0
+offset_top = 248.0
+offset_right = 951.0
+offset_bottom = 338.0
+theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_font_sizes/font_size = 20
+text = "One player is Mr. X; all other players are Detectives.
+
+"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 300.0
+offset_right = 807.0
+offset_bottom = 328.0
+theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_font_sizes/font_size = 20
+text = "Mr. X moves secretly and shows the ticket used."
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 357.0
+offset_right = 870.0
+offset_bottom = 385.0
+theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_font_sizes/font_size = 20
+text = "Detectives take turns moving and give used tickets to Mr. X."
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -276.5
+offset_top = 86.0
+offset_right = 276.5
+offset_bottom = 114.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_font_sizes/font_size = 20
+text = "Detectives cannot share spaces or move onto each other."
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.5
+offset_top = 145.0
+offset_right = 192.5
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_font_sizes/font_size = 20
+text = "Mr. X reveals his location on set rounds."
+
+[node name="Label7" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -389.0
+offset_top = 198.0
+offset_right = 389.0
+offset_bottom = 226.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_font_sizes/font_size = 20
+text = "Detectives win by landing on Mr. X — if not caught by the final round, Mr. X wins."
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 32.0
+offset_right = 147.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0.0093103545, 0.0093103545, 0.0093103545, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_ikblc")
+text = "BACK"
+script = ExtResource("3_5b1ud")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_back_pressed"]
