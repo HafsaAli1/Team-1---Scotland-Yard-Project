@@ -29,3 +29,8 @@ func _on_request_completed(result, response_code, headers, body):
 			var gameSelect = gameIdArray.pick_random()
 			#var label := Label.new()  # Create a new Label node
 			$Label3.text = str(gameSelect)
+
+
+func _on_backbutton_pressed():
+	get_tree().change_scene_to_file("res://main_menu.tscn")
+	
