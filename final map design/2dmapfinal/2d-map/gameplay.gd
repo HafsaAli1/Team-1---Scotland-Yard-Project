@@ -1,5 +1,21 @@
 extends Sprite2D
 
+# Setup Game
+func setup_game():
+	players.clear()
+	
+	var mr_x = Player.new(0, 0, 1, mr_x_tickets.duplicate())
+	players.append(mr_x)
+	
+	var detective1 = Player.new(1, 1, 24, detective_tickets.duplicate())
+	var detective2 = Player.new(2, 1, 77, detective_tickets.duplicate())
+	
+	players.append(detective1)
+	players.append(detective2)
+	
+	current_player = 0
+	round = 1
+	turn = 1
 # initiating Player class
 class Player:
 	var player_id:int
@@ -44,6 +60,19 @@ var detective_tickets = {
 	"Bus": 8,
 	"Train": 4
 }
+
+func mr_x_double_move(first_dest:int, first_ticket:String, second_dest:int, second_ticket:String):
+	var mr_x = get_mr_x()
+	
+	if mr_x.tickets.get("Double", 0) <= 0:
+		return
+		
+	mr_x.tickets["Double"] -= 1
+	
+	move_player(mr_x, first_dest, first_ticket)
+	move_player(mr_x, second_dest, second_ticket)
+	
+	turn += 1
 
 func get_mr_x() -> Player:
 	for p in players:
@@ -139,4 +168,18 @@ func next_turn() -> void:
 	if current_player >= players.size():
 		current_player = 0
 		round += 1
-		
+
+func win_check() -> void:
+	var mr_x:Player = get_mr_x()
+	
+	for p in players:
+		if p.player_role == 1 and p.player_position == mr_x.player_position:
+			print("Detectives Win!")
+			return
+	
+	if round > total_rounds:
+		print("Mr X Wins!")
+		return
+	
+	if valid_moves(mr_x).is_empty():
+		print("Detectives Win! Mr X has been Trapped!")

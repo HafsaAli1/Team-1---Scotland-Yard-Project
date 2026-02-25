@@ -57,7 +57,7 @@ func _on_request_completed(result, response_code, headers, body):
 		
 		while random_locations.size() < players.size():
 			var index = randi() % locations.size()
-			var location_number = int(locations[index]["location"])#
+			var location_number = int(locations[index]["location"])
 			
 			var valid = true
 			
