@@ -113,7 +113,7 @@ text = "START"
 
 [node name="Label3" type="Label" parent="."]
 layout_mode = 0
-offset_left = 549.0
-offset_top = 118.0
-offset_right = 589.0
-offset_bottom = 141.0
+offset_left = 514.0
+offset_top = 131.0
+offset_right = 624.0
+offset_bottom = 178.0
