@@ -18,6 +18,7 @@ func _on_request_completed(result, response_code, headers, body):
 	if response_code == 200:
 		var json_string = body.get_string_from_utf8()
 		var json_data = JSON.parse_string(json_string)
+		var json_resturn: JSON = json_data
 		if typeof(json_data) == TYPE_DICTIONARY:
 			print("JSON Data: ", json_data)
 		else:
@@ -34,11 +35,12 @@ func _on_request_completed(result, response_code, headers, body):
 				check = false
 		else:
 			print(json_data)
-	
-	
+		
+			
 func _on_button_pressed():
 	var headers = ["Content-Type: application/json"]
-	var url = "http://trinity-developments.co.uk/games" % [int($Label3.text)]
+	var url = "http://trinity-developments.co.uk/games" % [$Label3.text]
+	var data = {"gameId":$Label3.text,"mapId":101,"state":"Open","winner":"None","round":0,"length":13,"players":[]}
 	var error = http_request.request(url,headers,HTTPClient.METHOD_POST,)
 	if error != OK:
 		print("Request Maps: ", error,"\n")
