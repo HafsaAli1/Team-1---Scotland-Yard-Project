@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://csa41qrsv8k5s" path="res://station_1.gd" id="2_eobcy"]
 [ext_resource type="Texture2D" uid="uid://c3iwolog4nawj" path="res://xRoutes_00000.png" id="2_w4tea"]
 [ext_resource type="Script" uid="uid://bymxhy2k2iwfg" path="res://circle.gd" id="3_w4tea"]
+[ext_resource type="Script" uid="uid://jxreroo340tm" path="res://gameplay.gd" id="3_yuqrp"]
 [ext_resource type="Texture2D" uid="uid://ch8mfb2mbl7p4" path="res://frontal-taxi-cab.png" id="5_860hk"]
 [ext_resource type="Texture2D" uid="uid://dlbuwrtrtpnlj" path="res://bus.png" id="6_khfxy"]
 [ext_resource type="Texture2D" uid="uid://nd6nxqiu7pm" path="res://london-metro-logo.png" id="7_yuqrp"]
@@ -47,6 +48,7 @@ modulate = Color(1, 1, 1, 0.99607843)
 self_modulate = Color(0.87927365, 0.9016047, 0.9462667, 1)
 scale = Vector2(1.8791, 1.816)
 texture = ExtResource("1_iuamg")
+script = ExtResource("3_yuqrp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(317, 138)
@@ -2506,7 +2508,6 @@ text = "97
 "
 
 [node name="circle" type="Node2D" parent="Stations/station97"]
-visible = false
 position = Vector2(105, 622)
 script = ExtResource("3_w4tea")
 radius_x = 40.0

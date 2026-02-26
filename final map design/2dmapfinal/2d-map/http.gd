@@ -6,7 +6,6 @@ var starting_locations = {}
 var minimum_distance = 10
 var roles = {}
 var tickets = {"Taxi": 10, "Bus": 8, "Train": 4, "Black": 2}
-
 func _ready():
 	add_child(http_request)
 	http_request.request_completed.connect(_on_request_completed)
@@ -58,7 +57,7 @@ func _on_request_completed(result, response_code, headers, body):
 		
 		while random_locations.size() < players.size():
 			var index = randi() % locations.size()
-			var location_number = int(locations[index]["location"])#
+			var location_number = int(locations[index]["location"])
 			
 			var valid = true
 			
