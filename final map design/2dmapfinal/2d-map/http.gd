@@ -44,14 +44,22 @@ func _on_request_completed(result, response_code, headers, body):
 		for connection in connections:
 			var a = int(connection["locationA"])
 			var b = int(connection["locationB"])
+			var ticket_type = connection["ticket"]
 			
 			if not adjacency.has(a):
-				adjacency[a] = []
+				adjacency[a] = {}
 			if not adjacency.has(b):
-				adjacency[b] = []
+				adjacency[b] = {}
 			
-			adjacency[a].append(b)
-			adjacency[b].append(a)
+			if not adjacency[a].has(b):
+				adjacency[a][b] = []
+			if not adjacency[b].has(a):
+				adjacency[b][a] = []
+			
+			adjacency[a][b].append(ticket_type)
+			adjacency[b][a].append(ticket_type)
+		
+		adjacency_with_tickets = adjacency
 		
 		var random_locations = []
 		
@@ -81,6 +89,8 @@ func _on_request_completed(result, response_code, headers, body):
 			starting_locations[players[i]] = random_locations[i]
 		
 		assign_roles()
+		player_positions = starting_locations.duplicate()
+		start_game()
 		
 		for player_id in players:
 			print("Player ", player_id,
@@ -94,3 +104,85 @@ func _on_request_completed(result, response_code, headers, body):
 	else:
 		print("HTTP Error: ", response_code)
 	
+
+# MAIN GAMEPLAY LOGIC BELOW #
+
+var player_positions = {}
+var adjacency_with_tickets = {}
+var current_player_index = 0
+var current_player
+var round_number = 1
+
+func start_game():
+	current_player = players[current_player_index]
+	print("\n ===== SCOTLAND YARD GAME =====")
+	print("Round: ", round_number)
+	print_current_turn()
+	
+
+func print_current_turn():
+	print("\n--------------------")
+	print("Current Player: ", current_player, " (", roles[current_player], ")")
+	print("Current Location: ", player_positions[current_player])
+	print("Tickets: ", tickets)
+	show_available_moves()
+
+
+func next_turn():
+	current_player_index += 1
+	
+	if current_player_index >= players.size():
+		current_player_index = 0
+		round_number += 1
+		print("\n===== ROUND ", round_number, " =====")
+	
+	current_player = players[current_player_index]
+	print_current_turn()
+
+
+func move_to(destination):
+	var location = player_positions[current_player]
+	
+	if not adjacency_with_tickets.has(location):
+		print("Invalid move, please try again.")
+		return
+	
+	if not adjacency_with_tickets[location].has(destination):
+		print("Not Connected")
+		return
+	
+	var transport_types = adjacency_with_tickets[location][destination]
+	
+	var used_ticket = null
+	
+	for ticket in transport_types:
+		if tickets.has(ticket) and tickets[ticket] > 0:
+			used_ticket = ticket
+			break
+			
+		if used_ticket == null:
+			print("No valid tickets for this move.")
+			return
+			
+		tickets[used_ticket] -= 1
+		
+		player_positions[current_player] = destination
+		
+		print("Player ", current_player, " moved to ", destination, " using ", used_ticket)
+		next_turn()
+		
+
+func show_available_moves():
+	var location = player_positions[current_player]
+	
+	if not adjacency_with_tickets.has(location):
+		print("No moves available.")
+		return
+		
+	print("Connected Stations:")
+	
+	for destination in adjacency_with_tickets[location].keys():
+		var transport_types = adjacency_with_tickets[location][destination]
+		print(" - ", destination, " on ", transport_types)
+	
+	print("\nType move_to(station #) to move.")
