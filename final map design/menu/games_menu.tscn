@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://ckj78iyt0lmp1"]
+[gd_scene load_steps=10 format=3 uid="uid://ckj78iyt0lmp1"]
 
 [ext_resource type="Script" uid="uid://d3v58dip1124a" path="res://HTTP.gd" id="1_n5lge"]
 [ext_resource type="Texture2D" uid="uid://c15ilv38wvn5l" path="res://Leeds Map.webp" id="1_s25x5"]
 [ext_resource type="Script" uid="uid://4o3ouapb6vhc" path="res://back_button.gd" id="3_dr236"]
+[ext_resource type="Script" uid="uid://dn6f5js3rudnl" path="res://startbutton.gd" id="4_rnwdu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n5lge"]
 texture = ExtResource("1_s25x5")
@@ -133,12 +134,11 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxFlat_n5lge")
 text = "START"
+script = ExtResource("4_rnwdu")
 
 [node name="Label3" type="Label" parent="."]
 layout_mode = 0
-offset_left = 549.0
-offset_top = 118.0
-offset_right = 589.0
-offset_bottom = 141.0
-
-[connection signal="pressed" from="Panel/Button" to="." method="_on_backbutton_pressed"]
+offset_left = 514.0
+offset_top = 131.0
+offset_right = 624.0
+offset_bottom = 178.0

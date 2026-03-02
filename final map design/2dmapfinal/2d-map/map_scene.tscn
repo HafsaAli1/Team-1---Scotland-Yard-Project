@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d3e0ywxu82ktc"]
+[gd_scene load_steps=15 format=3 uid="uid://d3e0ywxu82ktc"]
 
 [ext_resource type="Texture2D" uid="uid://cyypgfjvqipv" path="res://Screenshot 2026-02-08 173952.png" id="1_iuamg"]
 [ext_resource type="Script" uid="uid://co5dxpo5enwdc" path="res://http.gd" id="1_khfxy"]
@@ -3250,11 +3250,7 @@ text = "x8"
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [node name="ButtonsTouch" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="ButtonsTouch"]
-script = ExtResource("3_w4tea")
-radius_x = 40.0
-radius_y = 25.0
-fill_color = Color(0, 0, 0, 1)
-outline_color = Color(1, 1, 1, 0.4627451)
-outline_width = 5.0
+position = Vector2(-156, -45)

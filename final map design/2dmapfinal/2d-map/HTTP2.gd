@@ -1,10 +1,10 @@
-	extends Node
+extends Node
 
 var values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
 @onready var http_request := HTTPRequest.new()
 @onready var button = $Button
 var check: bool = true
-
 func _ready():
 	add_child(http_request)
 	http_request.request_completed.connect(_on_request_completed)
@@ -15,29 +15,12 @@ func _ready():
 		print("error: ", error,"\n")
 	button.pressed.connect(_on_button_pressed)
 func _on_request_completed(result, response_code, headers, body):
-	
-	if not is_inside_tree(): 
-		return
-
 	if response_code == 200:
 		var json_string = body.get_string_from_utf8()
 		var json_data = JSON.parse_string(json_string)
-		
+		var json_resturn: JSON = json_data
 		if typeof(json_data) == TYPE_DICTIONARY:
-			var games = json_data.get("games", []) 
-			var gameIdArray = []
-			
-			for i in games:
-				gameIdArray.append(i["gameId"])
-			
-			if gameIdArray.size() > 0:
-				var gameSelect = gameIdArray.pick_random()
-				
-				
-				if has_node("Label3"):
-					$Label3.text = str(gameSelect)
-				else:
-					print("Error: Label3 not found in scene tree.")
+			print("JSON Data: ", json_data)
 		else:
 			print("Failed to parse JSON.")
 		if check == true:
@@ -52,17 +35,12 @@ func _on_request_completed(result, response_code, headers, body):
 				check = false
 		else:
 			print(json_data)
-	
-	
+		
+			
 func _on_button_pressed():
 	var headers = ["Content-Type: application/json"]
-	var url = "http://trinity-developments.co.uk/games" % [int($Label3.text)]
-	var error = http_request.request(url,headers,HTTPClient.METHOD_POST,json_data)
+	var url = "http://trinity-developments.co.uk/games" % [$Label3.text]
+	var data = {"gameId":$Label3.text,"mapId":101,"state":"Open","winner":"None","round":0,"length":13,"players":[]}
+	var error = http_request.request(url,headers,HTTPClient.METHOD_POST,)
 	if error != OK:
 		print("Request Maps: ", error,"\n")
-
-func _on_backbutton_pressed():
-	get_tree().change_scene_to_file("res://main_menu.tscn")
-
-func _on_startbutton_pressed():
-	get_tree().change_scene_to_file("res://map_scene.tscn")
